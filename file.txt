@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hello</title>
+<style>
+.headings {
+color:red;
+background-color:blue;
+border: red;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1 class="headings">Hello world</h1>
+<h2 class="headings">Hello world</h2>
+<h3 class="headings">Hello world</h3>
+<p style="color: lightblue;"> asdasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa </P>
+</body>
+</html>
