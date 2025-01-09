@@ -9,12 +9,16 @@ background-color:blue;
 border: red;
 text-align: center;
 }
+.para{
+margin:4px;
+background-color:red
+}
 </style>
 </head>
 <body>
 <h1 class="headings">Hello world</h1>
 <h2 class="headings">Hello world</h2>
 <h3 class="headings">Hello world</h3>
-<p style="color: lightblue;"> asdasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa </P>
+<p class="para"> ksdfsdkfdskkkkkkkkddddddddddddddddddddddddddddddddddddddddddlkame </p>
 </body>
 </html>
