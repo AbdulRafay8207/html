@@ -131,3 +131,98 @@ color: red;
 .footerheading{
   color: white;
 }
+
+@media only screen and (max-width: 375px) {
+
+  .SigninHeading{
+    font-size: 11px;
+  }
+
+  .footer{
+    font-size: 10px;
+  }
+
+  .SigninHeading{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .nav{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+
+  .cdiv{
+    position: sticky;
+      
+  }
+
+  .form{
+    margin: 10px;
+  }
+
+  .footer{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .forminsidediv{
+    padding-left: 10px;
+  }
+
+  .legend{
+    font-size: 20px;
+    padding-left: 65px;
+    padding-right: 0px;
+  }
+
+  .lable1{
+    padding-left: 0px;
+  }
+
+  .box1{
+   margin-left: 0px; 
+  }
+
+  .lable2{
+    padding-left: 0px;
+  }
+
+  .box2{
+    margin-left: 2px;
+  }
+
+  .lable3{
+    padding-left: 36px;
+  }
+
+  .box3{
+    margin-left: 3px;
+  }
+
+  .lable4{
+    padding-left: 8px;
+  }
+
+  .box4{
+    margin-left: 3px;
+  }
+
+  .lable5{
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+  }
+
+  .box5{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .button{
+    margin-left: 130px;
+  }
+  
+
+}

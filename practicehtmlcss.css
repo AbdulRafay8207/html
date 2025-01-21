@@ -23,20 +23,16 @@
             right: 2px;
             bottom: 10px;
 }
-#box2:hover{
-  background-color: blueviolet;
-  color: yellow;
-  text-align: justify;
+
+.boxx{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  transition: width 1s, height 1s, transform 1s;
 }
 
-input:hover{
-  color: red;
-  background-color: yellow;
+.boxx:hover{
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
 }
-
-input:focus{
-  background-color: blue;
-  color: aqua;
-  border: 10px solid black;
-}
-

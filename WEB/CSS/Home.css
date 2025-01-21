@@ -58,3 +58,11 @@
 .footerheading{
   color: white;
 }
+
+@media only screen and (max-width: 375px) {
+  
+  .footer{
+    font-size: 10px;
+  }
+
+}
