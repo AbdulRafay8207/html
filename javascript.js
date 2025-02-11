@@ -182,5 +182,8 @@ colorsetone.push("green")   //this is also known is shallow copy buz its not cha
    name : "rafay",
    address : Math.floor(Math.random()*7)
   }
-  console.log(randomenumber)
- 
+  // console.log(randomenumber)
+
+  number = Math.random()*500
+  numbers = Math.floor(number)+500
+  console.log(numbers)
