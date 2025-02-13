@@ -109,6 +109,8 @@ fruits.push(123,456)
 
  fruits = ["apple", "banana", "cherry"]
  lastfruit = fruits.pop()
+//  console.log(fruits)
+//  console.log(lastfruit)
  
  //Concat
 
@@ -116,9 +118,9 @@ fruits.push(123,456)
  car2 = ["Honda"]
  totalcars = car.concat(car2)
  totalcars.push(123)
- /*console.log(totalcars)
- console.log(car)
- console.log(car2)*/
+//  console.log(totalcars)
+//  console.log(car)
+//  console.log(car2)
 
 //include
 
@@ -186,4 +188,156 @@ colorsetone.push("green")   //this is also known is shallow copy buz its not cha
 
   number = Math.random()*500
   numbers = Math.floor(number)+500
-  console.log(numbers)
+  
+  //Swap
+
+ a = 1
+ b = 2
+ c = a // 1
+ a = b // 2
+ b = c // 1
+
+//  console.log(a, b)
+
+//Changing from string to Number
+
+personA = "18"
+personB = Number(personA)
+// console.log( personA)
+// console.log( personB)
+// console.log(typeof personA)
+// console.log(typeof personB)
+
+//Changing from number to string
+
+ age = 18
+age.toString()
+//  console.log( age)          // ???????????????????????????
+//  console.log(typeof age)
+
+//Concating
+
+firstName = "abdul"
+lastName = " rafay"
+fullname = firstName+lastName
+// console.log(fullname)
+
+//another method
+
+firstName = "abdul"
+lastName = "rafay"
+fullname = `${firstName} ${lastName}!` //This one method is recommended and you can edit too
+
+rnumber = `random numbers ${Math.random()*500}`
+//OR
+a = "Random Number"
+b = Math.random()*500
+finalresult = a+b
+// console.log(finalresult)
+
+//Task
+
+  restaurant = {
+  name : "Ichiran Ramen",
+  address : `${Math.floor(Math.random()*100)+1} Johnson Ave`,
+  city : "Brooklyn",
+  state : "NY",
+  zipcode : "11206",
+}
+  fullinfo = `${restaurant.address} ${restaurant.city} ${restaurant.state} ${restaurant.zipcode} asdasd`
+
+
+//  console.log(fullinfo)
+
+ //To modify key
+ objj = {
+  name : "rafay",
+  age : 18,
+  job : "np"
+ }
+
+ objj.name = "AbdulRafay"
+ delete objj.job
+ 
+//  console.log(objj)
+
+//Task 3
+
+student = {
+  name : "AbdulRafay",
+  age : 18,
+  subjects : ["Math", "english", "physics"],
+  isEnrolled : true
+}
+// console.log("Name",student.name)
+// console.log("age",student.age)
+// console.log("subjects",student.subjects)
+// console.log("isEnrolled",student.isEnrolled)
+
+student.grade = "A"
+student.isEnrolled = "false"
+
+// console.log(student)
+
+//CONDITIONS
+
+// myAge = 18
+// if(myAge > 20){
+  // console.log("Your age is greater than 20 ")
+// }
+// else{
+  // console.log("you are younger")
+// }
+
+//Task
+
+// isUserloggedin = false                                    Method
+// isUserproSubscribe = true                                    
+
+// if(isUserloggedin == false){
+//   console.log("please login first to see the data")
+// }
+// if(isUserproSubscribe){
+//   console.log("you are pro Subscriber")
+// }
+// else{
+//   console.log("please subscribe")
+// }
+//------------------------ ACTUAL METHOD
+
+// isUserloggedin = false
+// isUserproSubscribe = false
+
+// if(isUserloggedin == false){
+//   console.log("please login first to see the data")
+// }
+// else{
+//   if(isUserproSubscribe){
+//   console.log("you are pro Subscriber")
+// }
+// else{
+//   console.log("please subscribe")
+// }
+// }
+
+//----------------------------------- NOT OPERATOR
+
+// isUserloggedin = true
+// isUserproSubscribe = false
+
+// if(!isUserloggedin){
+//   console.log("Please login first")
+// }
+
+//----------------------------------
+
+user = false
+pro = true
+if(user && pro){
+  console.log( "you are pro subscriber")
+}else{
+  console.log("pleasea login first")
+}
+if(user && !pro){
+  console.log("please subscribe")
+}
