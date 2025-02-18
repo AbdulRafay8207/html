@@ -331,13 +331,183 @@ student.isEnrolled = "false"
 
 //----------------------------------
 
-user = false
-pro = true
-if(user && pro){
-  console.log( "you are pro subscriber")
-}else{
-  console.log("pleasea login first")
-}
-if(user && !pro){
-  console.log("please subscribe")
+// user = false
+// pro = true
+// if(user && pro){
+//   console.log( "you are pro subscriber")
+// }else{
+//   console.log("pleasea login first")
+// }
+// if(user && !pro){
+//   console.log("please subscribe")
+// }
+
+//  ASSASSIGNMENT
+
+// percentage = 61
+
+// if(percentage >= 90){
+//   console.log("A Grade")
+// }
+//   else if(percentage >= 80){
+//     console.log("B Grade")
+//   }
+
+//   else if(percentage >= 70){
+//     console.log("C Grade")
+//   }
+
+//   else if(percentage >= 60){
+//     console.log("D Grade")
+//   }
+
+//   else if(percentage < 60){
+//     console.log("F Grade")
+//   }
+
+//  SWITCH CASE ----------------------
+
+// trafficlight = "red"
+// message = ""
+
+// switch(trafficlight){
+//   case "red":
+//     message = "stop immediately";
+
+//   case "yellow":
+//     message = "prepare to stop"
+
+//   case "green":
+//     message = "proceed or continue driving";
+
+//   default
+
+// }
+// console.log(message)
+
+// WITHOUT OPERATOR
+
+// percentage = 91
+
+// switch(percentage){
+//   case 90:
+//   console.log("A Grade")
+//   break;
+
+//   case 80:
+//   console.log("B Grade")
+//   break;
+
+//   case 70:
+//   console.log("C Grade")
+//   break;
+
+//   case 60:
+//   console.log("D Grade")
+//   break;
+
+//   case 50:
+//     console.log("FAIL")
+//     break;
+
+//     default:
+//       console.log("invalid percentage")
+// }
+
+//  With Operators
+
+// percentage = 84
+
+// switch(true){
+//   case percentage >= 90:
+//   console.log("A Grade")
+//   break;
+
+//   case percentage >=80:
+//   console.log("B Grade")
+//   break;
+
+//   case percentage >= 70:
+//   console.log("C Grade")
+//   break;
+
+//   case percentage >= 60:
+//   console.log("D Grade")
+//   break;
+
+//   case percentage < 60:
+//     console.log("FAIL")
+//     break;
+
+//     default:
+//       console.log("invalid percentage")
+// }
+
+// SWITCH ASSISSMENT
+
+// DayOfWeek = "wednesday"
+
+// switch(true){
+//   case DayOfWeek == "saturday" || DayOfWeek == "sunday":
+//     console.log("wake up at 10am")
+//     break;
+
+//   case DayOfWeek == "monday":
+//     console.log("wake up at 8am")
+//     break;
+
+//   case DayOfWeek == "tuesday" || DayOfWeek == "wednesday":
+//     console.log("wake up at 9am")
+//     break;
+
+//   case DayOfWeek == "thursday":
+//     console.log("wake up at 9:30am")
+//     break;
+
+//   case DayOfWeek == "friday":
+//     console.log("wake up at 10am")
+//     break;
+
+//   default:
+//     console.log("error")
+// }
+
+// CONFUSION TOPIC----------------------------------
+
+// day = "monday"
+// if (day == "tuesday" || ""){  // value after operator is always true if its non-empty string, if it is empty then it will false
+//   console.log("true")
+// }
+
+//                          LOOPS
+
+// for(i = 5; i <= 50; i = i + 5){
+//   console.log(i)
+// }
+
+//    TASK
+
+// for(i = 1; i <=20; i= i+1){      //Number 1
+//   console.log(i)
+// }
+
+// sum = 0                        //Number 2
+// for(i=1; i <=5; i= i=i+1){
+//   sum = sum + i
+// }
+// console.log(sum)
+
+// for(i = 20; i > 1; i=i-1){     /Number 3
+
+// for(i = 2; i <=40; i = i+2/5){         //HOME WORK
+//   console.log(i)
+// }
+
+//BREAK-------------------------
+
+for(i = 1; i <=20; i= i=i+1){
+  if(i >= 16){
+    break
+  }
+  console.log(i)
 }
