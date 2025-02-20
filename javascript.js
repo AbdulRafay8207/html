@@ -534,39 +534,39 @@ student.isEnrolled = "false"
 
 // Homework for Loop
 
-for(i = 1; i <= 100; i++){
-  if(i == 10){
-      console.log("Checkpoint! 10")
-  }
-  else if(i == 20){
-      console.log("Checkpoint! 20")
-  }
-  else if(i == 30){
-      console.log("Checkpoint! 30")
-  }
-  else if (i == 40){
-      console.log("Checkpoint! 40")
-  }
-  else if (i == 50){
-      console.log("Half way there!")
-  }
-  else if (i == 60){
-      console.log("Checkpoint! 60")
-  }
-  else if (i == 70){
-      console.log("Checkpoint! 70")
-  }
-  else if (i == 80){
-      console.log("Checkpoint! 80")
-  }
-  else if (i == 90){
-      console.log("Checkpoint! 90")
-  }
-  else if (i == 100){
-      console.log("You made it!")
-  }
-}
-console.log("All done!")
+// for(i = 1; i <= 100; i++){
+//   if(i == 10){
+//       console.log("Checkpoint! 10")
+//   }
+//   else if(i == 20){
+//       console.log("Checkpoint! 20")
+//   }
+//   else if(i == 30){
+//       console.log("Checkpoint! 30")
+//   }
+//   else if (i == 40){
+//       console.log("Checkpoint! 40")
+//   }
+//   else if (i == 50){
+//       console.log("Half way there!")
+//   }
+//   else if (i == 60){
+//       console.log("Checkpoint! 60")
+//   }
+//   else if (i == 70){
+//       console.log("Checkpoint! 70")
+//   }
+//   else if (i == 80){
+//       console.log("Checkpoint! 80")
+//   }
+//   else if (i == 90){
+//       console.log("Checkpoint! 90")
+//   }
+//   else if (i == 100){
+//       console.log("You made it!")
+//   }
+// }
+// console.log("All done!")
 
 //    While loop
 
@@ -575,3 +575,83 @@ console.log("All done!")
 //   console.log(i)
 //   i = i + 10
 // }
+
+// While loop game
+
+// guess = 1
+// target = Math.floor(Math.random()*10) 
+
+// while(guess !== target){
+//   if(guess === target){
+//     console.log("You guess it right!")
+//   }
+//   else if(guess > target){
+//     console.log("You guess it low")
+//   }
+//   else{
+//     console.log("You guess it high")
+//   }
+//   target = Math.floor(Math.random()*10)
+// }
+
+//      USING For LOOP IN ARRAY
+
+// value = ['rock', "paper", "scissor"]
+// for(i = 0; i < value.length; i++){
+//   console.log(value[i])
+// }
+
+//    Using While loop in array
+
+// value = ['rock', "paper", "scissor"]
+// i = 0
+// while(i < value.length){
+//   console.log(value[i])
+//   i++
+// }
+
+//    TASk ARRAY
+
+library = [Book1 = {title : "JungleBook", author : "Ahmed", yearPublished : 2015 },
+           Book2 = {title : "Mathematics", author : "Abdul", yearPublished : 2018},
+           book3 = {title : "English", author : "John", yearPublished : 2022}]
+    
+    library.push(SystemDesign = {title : "Computer", author : "Rafay", yearPublished : 2024})
+    
+    for(i = 0; i < library.length; i++){
+      if(library[i].title == "Computer"){
+          // console.log(library[i])
+      }
+    }
+    library.splice(1,1)
+    // console.log(library)
+
+    //  Escape CHARACTERS-------------------------------------------------------------------------------------------
+
+    let string = "firstline\nSecond line\tTabbed!"
+    // console.log(string)
+    a = "C:\\Users\\Name\\Documents"
+    // console.log(a)
+    b = "He said\"HelloWorld\""
+    // console.log(b)
+
+    // String Methods-----------------------------------------------------------------------------------------
+
+    split = "Hello World"
+    // console.log(split.split(' '))
+
+    // Task-------
+
+    for(i = 20; i >= 1; i--){
+      // console.log(i)
+    }
+
+    array = ["we","are","learning","javascript"]
+    for(i = 3; i >= 0; i--){
+      console.log(array[i])
+    }
+    
+    
+
+
+    
