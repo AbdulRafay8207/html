@@ -291,7 +291,7 @@ student.isEnrolled = "false"
 
 //Task
 
-// isUserloggedin = false                                    Method
+// isUserloggedin = true                             /* Method */
 // isUserproSubscribe = true                                    
 
 // if(isUserloggedin == false){
@@ -306,7 +306,7 @@ student.isEnrolled = "false"
 //------------------------ ACTUAL METHOD
 
 // isUserloggedin = false
-// isUserproSubscribe = false
+// isUserproSubscribe = true
 
 // if(isUserloggedin == false){
 //   console.log("please login first to see the data")
@@ -331,8 +331,8 @@ student.isEnrolled = "false"
 
 //----------------------------------
 
-// user = false
-// pro = true
+// user = true                            Kinda wrong code
+// pro = false
 // if(user && pro){
 //   console.log( "you are pro subscriber")
 // }else{
@@ -342,9 +342,9 @@ student.isEnrolled = "false"
 //   console.log("please subscribe")
 // }
 
-//  ASSASSIGNMENT
+// Assignment
 
-// percentage = 61
+// percentage = 59
 
 // if(percentage >= 90){
 //   console.log("A Grade")
@@ -368,19 +368,23 @@ student.isEnrolled = "false"
 //  SWITCH CASE ----------------------
 
 // trafficlight = "red"
-// message = ""
+// message = "123"
 
 // switch(trafficlight){
 //   case "red":
-//     message = "stop immediately";
+//     message = "stop immediately"
+//     break;
 
 //   case "yellow":
 //     message = "prepare to stop"
+//     break;
 
 //   case "green":
 //     message = "proceed or continue driving";
+//     break;
 
-//   default
+//   default:
+//     message = "error"
 
 // }
 // console.log(message)
@@ -445,7 +449,7 @@ student.isEnrolled = "false"
 
 // SWITCH ASSISSMENT
 
-// DayOfWeek = "wednesday"
+// DayOfWeek = "sunday"
 
 // switch(true){
 //   case DayOfWeek == "saturday" || DayOfWeek == "sunday":
@@ -474,9 +478,11 @@ student.isEnrolled = "false"
 
 // CONFUSION TOPIC----------------------------------
 
-// day = "monday"
+// day = ""
 // if (day == "tuesday" || ""){  // value after operator is always true if its non-empty string, if it is empty then it will false
 //   console.log("true")
+// }else{
+//   console.log("error")
 // }
 
 //                          LOOPS
@@ -497,17 +503,75 @@ student.isEnrolled = "false"
 // }
 // console.log(sum)
 
-// for(i = 20; i > 1; i=i-1){     /Number 3
+// for(i = 5; i > 0; i--){               /* Number 3 */
+//     console.log(i)
+// }     
 
-// for(i = 2; i <=40; i = i+2/5){         //HOME WORK
+// for(i = 2; i <=40; i = i+2){
+//   if(i == 10 || i == 20 || i == 30 || i == 40){
+//     continue;
+//   }
 //   console.log(i)
 // }
 
 //BREAK-------------------------
 
-for(i = 1; i <=20; i= i=i+1){
-  if(i >= 16){
-    break
+// for(i = 1; i <=20; i=i+1){
+//   if(i >= 16){
+//     break
+//   }
+//   console.log(i)
+// }
+
+//Continue--------------
+
+// for(i = 1; i <=20; i=i+1){
+//   if(i == 16){
+//     continue
+//   }
+//   console.log(i)
+// }
+
+// Homework for Loop
+
+for(i = 1; i <= 100; i++){
+  if(i == 10){
+      console.log("Checkpoint! 10")
   }
-  console.log(i)
+  else if(i == 20){
+      console.log("Checkpoint! 20")
+  }
+  else if(i == 30){
+      console.log("Checkpoint! 30")
+  }
+  else if (i == 40){
+      console.log("Checkpoint! 40")
+  }
+  else if (i == 50){
+      console.log("Half way there!")
+  }
+  else if (i == 60){
+      console.log("Checkpoint! 60")
+  }
+  else if (i == 70){
+      console.log("Checkpoint! 70")
+  }
+  else if (i == 80){
+      console.log("Checkpoint! 80")
+  }
+  else if (i == 90){
+      console.log("Checkpoint! 90")
+  }
+  else if (i == 100){
+      console.log("You made it!")
+  }
 }
+console.log("All done!")
+
+//    While loop
+
+// i = 10
+// while(i <= 100){
+//   console.log(i)
+//   i = i + 10
+// }
