@@ -1,0 +1,120 @@
+/* Base styles */
+.header {
+  background-color: purple;
+  padding: 40px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.headings {
+  color: white;
+}
+
+.cdiv {
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  background-color: #333;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.a:hover {
+  background-color: lightslategray;
+  color: red;
+}
+
+.Article1 {
+  background-color: ghostwhite;
+  margin: 20px;
+  padding: 10px;
+}
+
+.Article2Headings {
+  color: blue;
+}
+
+.footer {
+  background-color: purple;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+}
+
+.footerheading {
+  color: white;
+}
+
+/* Media Query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .header, .footer {
+      padding: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .nav {
+      font-size: 14px;
+  }
+
+  .Article1 {
+      margin: 10px;
+      padding: 10px;
+  }
+
+  .a {
+      padding: 8px 10px;
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  .Article2Headings {
+      font-size: 18px;
+  }
+
+  .footerheading {
+      font-size: 16px;
+  }
+}
+
+/* Media Query for very small screens (mobile) */
+@media screen and (max-width: 480px) {
+  .header {
+      padding: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: blue;
+  }
+
+  .Article1 {
+      font-size: 14px;
+  }
+
+  .nav {
+      font-size: 12px;
+  }
+
+  .a {
+      padding: 8px;
+      display: block;
+      text-align: center;
+  }
+
+  .footer {
+      padding: 20px;
+  }
+}

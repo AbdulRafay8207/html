@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Practice</title>
+        <link href="./practicehtmlcss.css" rel="stylesheet">
+        <style>
+          .boxx{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* transition: width 2s, height 2s, transform 2s; */
+  transition-timing-function: ease-in-out;
+}
+.boxx:hover{
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+        </style>
+    </head>
+      <body class="body">
+        <div class="container">
+         <div class="box" id="box1">Box1</div>
+         <div class="box" id="box2">Box2</div>
+         <div class="box" id="box3">Box3</div>
+         <div class="box" id="box4">Box4</div><br><br>
+
+         <input type="text" placeholder="writeyourname">
+         <input type="text" placeholder="writeyourname">
+         <input type="text" placeholder="writeyourname">
+        </div><br><br>
+        <div class="boxx"></div>
+      </body>
+  </html>
