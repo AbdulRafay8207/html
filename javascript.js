@@ -578,7 +578,6 @@ student.isEnrolled = "false"
 
 // While loop game
 
-<<<<<<< HEAD
 guess = 1
 target = Math.floor(Math.random()*10) 
 
@@ -594,7 +593,7 @@ while(guess !== target){
   }
   target = Math.floor(Math.random()*10) 
 }
-=======
+
 // guess = 1
 // target = Math.floor(Math.random()*10) 
 
@@ -610,7 +609,7 @@ while(guess !== target){
 //   }
 //   target = Math.floor(Math.random()*10)
 // }
->>>>>>> 8cfe7cfaae52964f1229eeea3c299b57bf5359d0
+
 
 //      USING For LOOP IN ARRAY
 
@@ -630,24 +629,22 @@ while(guess !== target){
 
 //    TASk ARRAY
 
-library = [Book1 = {title : "JungleBook", author : "Ahmed", yearPublished : 2015 },
-           Book2 = {title : "Mathematics", author : "Abdul", yearPublished : 2018},
-           book3 = {title : "English", author : "John", yearPublished : 2022}]
-    
-    library.push(SystemDesign = {title : "Computer", author : "Rafay", yearPublished : 2024})
-    
-    for(i = 0; i < library.length; i++){
-      if(library[i].title == "Computer"){
-          // console.log(library[i])
-      }
-    }
-    library.splice(1,1)
-    // console.log(library)
-<<<<<<< HEAD
-    library[1].yearPublished = 2014
-    //  
-=======
->>>>>>> 8cfe7cfaae52964f1229eeea3c299b57bf5359d0
+library = [{title : "JungleBook", author : "Ahmed", yearPublished : 2015 },
+  {title : "Mathematics", author : "Abdul", yearPublished : 2018},
+  {title : "English", author : "John", yearPublished : 2022}]
+
+library.push({title : "Computer", author : "Rafay", yearPublished : 2024}) // push new book
+
+for(i = 0; i < library.length; i++){
+if(library[i].title == "Computer"){  // finding specific book
+// console.log(library[i])
+}
+}
+library.splice(1,1)         //removing 1 book
+// console.log(library) 
+
+library[1].yearPublished = 2014 //Updating year 
+console.log(library)
 
     //  Escape CHARACTERS-------------------------------------------------------------------------------------------
 
@@ -660,7 +657,6 @@ library = [Book1 = {title : "JungleBook", author : "Ahmed", yearPublished : 2015
 
     // String Methods-----------------------------------------------------------------------------------------
 
-<<<<<<< HEAD
     a = "Simple text"
     // console.log(a.toUpperCase())
 
@@ -689,24 +685,6 @@ library = [Book1 = {title : "JungleBook", author : "Ahmed", yearPublished : 2015
       ReversedSentence += sentence[i]
     }
     // console.log(ReversedSentence)
-
-=======
-    split = "Hello World"
-    // console.log(split.split(' '))
-
-    // Task-------
-
-    for(i = 20; i >= 1; i--){
-      // console.log(i)
-    }
-
-    array = ["we","are","learning","javascript"]
-    for(i = 3; i >= 0; i--){
-      console.log(array[i])
-    }
-    
-    
->>>>>>> 8cfe7cfaae52964f1229eeea3c299b57bf5359d0
 
 
     
