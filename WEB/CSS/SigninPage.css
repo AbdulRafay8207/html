@@ -1,0 +1,228 @@
+.form{
+  margin: 50px ;
+  background-color: ghostwhite;
+  border: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: start;
+}
+.SigninHeading{
+  background-color: purple;
+  padding: 40px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.forminsidediv{
+  padding-left: 620px;
+}
+
+.h1{
+  color: white;
+}
+
+.lable1{
+  padding-left: 50px;
+}
+
+.lable2{
+  padding-left: 50px;
+}
+
+.lable3{
+  padding-left: 50px;
+}
+
+.lable4{
+  padding-left: 50px;
+}
+
+.lable5{
+  padding-right: 400px;
+}
+
+.field{
+  padding-left: 600px;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.legend{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.button{
+  margin-left: 180px;
+  font-size: 15px;
+}
+
+.box1{
+  margin-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.box2{
+  margin-left: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.box3{
+  margin-left: 48px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.box4{
+  margin-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.box5{
+  margin-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/* <!-- Nav Bar --> */
+
+.cdiv{
+  text-align: left;
+  position: sticky;
+top: 0px;
+}
+
+.nav{
+background-color: #333;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+
+}
+
+.a{
+color: white;
+text-decoration: none;
+padding: 10px 15px;
+display: inline-block;
+}
+
+.a:hover{
+background-color: lightslategray;
+color: red;
+}
+
+.footer{
+  background-color: purple;
+  padding: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.footerheading{
+  color: white;
+}
+
+@media only screen and (max-width: 375px) {
+
+  .SigninHeading{
+    font-size: 11px;
+  }
+
+  .footer{
+    font-size: 10px;
+  }
+
+  .SigninHeading{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .nav{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+
+  .cdiv{
+    position: sticky;
+      
+  }
+
+  .form{
+    margin: 10px;
+  }
+
+  .footer{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .forminsidediv{
+    padding-left: 10px;
+  }
+
+  .legend{
+    font-size: 20px;
+    padding-left: 65px;
+    padding-right: 0px;
+  }
+
+  .lable1{
+    padding-left: 0px;
+  }
+
+  .box1{
+   margin-left: 0px; 
+  }
+
+  .lable2{
+    padding-left: 0px;
+  }
+
+  .box2{
+    margin-left: 2px;
+  }
+
+  .lable3{
+    padding-left: 36px;
+  }
+
+  .box3{
+    margin-left: 3px;
+  }
+
+  .lable4{
+    padding-left: 8px;
+  }
+
+  .box4{
+    margin-left: 3px;
+  }
+
+  .lable5{
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+  }
+
+  .box5{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .button{
+    margin-left: 130px;
+  }
+  
+
+}
