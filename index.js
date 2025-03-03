@@ -1,6 +1,13 @@
-// let myHeader = document.getElementById("header");
-// myHeader.style.backgroundColor = "blue";
+// Dom Exercise: 1
+// mytext = document.getElementById("text")
+// mytext.style.backgroundColor = "lightgray"
+// mytext.style.color = "green"
+// mytext.style.fontsize = "18px"
 
-// myline = document.getElementById("line")
-// myline.textContent = "This is my new line"
+// Dom Exercise: 2 ---------------------------------------------------------------------------
 
+// mytext = document.querySelector("paragraph")
+// testing = mytext.textContent = "New paragraph text"
+
+// myheading = document.querySelector("heading")
+// myheading.innerText = "New heading text"

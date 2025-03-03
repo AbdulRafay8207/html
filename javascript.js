@@ -852,23 +852,85 @@ MaskedEmail += "@"+secondpart
 
 // Task encodeCipher----------------------------------------------------------------------------------------------------
 
-// function decodeCipher(string){
-//  obj = {"G":"A","A":"G","D":"E","E":"D","R":"Y","Y":"R","P":"O","O":"P","L":"U","U":"L","K":"I","I":"K"}
-//  newstring = string.toUpperCase()
-//  encodestring = ""
-// for(i=0;i<newstring.length;i++){
-//   if(obj[string[i]]){
-//     encodestring += obj[newstring[i]]    // Practice
-//   }else{
-//     encodestring += newstring[i]
+// function encodeCipher(string){
+//   obj = {"G":"A","A":"G","D":"E","E":"D","R":"Y","Y":"R","P":"O","O":"P"}
+//   newstring = string.toUpperCase()
+//   encodestring = ""
+//   for(i=0;i<newstring.length;i++){
+//     if(obj[newstring[i]]){
+//       encodestring += obj[newstring[i]]
+//     }else{
+//       encodestring += newstring[i]
+//     }
 //   }
+//   return encodestring
 // }
-// return encodestring
-// }
-// result = decodeCipher("gawde")
+// result = encodeCipher("oqwipei")
 // console.log(result)
 
+// Task getrandomInteger---------------------------------------------------------
 
+// function getRandomInteger(min,max){
+//   return Math.floor(Math.random()*(max - min + 1)) +min
+// }
+// resuslt = getRandomInteger(1,10)
+// console.log(resuslt)
 
+// Practice of frequency counter ***********************************************
 
+// products = ["mouse", "keyboard" , "speaker" , "mouse" , "laptop" , "speaker"]
 
+// counter = {}
+
+// for(let prodcut of products){
+//   if(!counter[prodcut]){
+//     counter[prodcut] = 1
+//   }else{
+//     counter[prodcut]++
+//   }
+// }
+// console.log(counter)
+
+// Task ValidAnagram---------------------------------------------------------------------
+
+// function validAnagram(str1,str2){
+//   if(str1.length !== str2.length){
+//     return false;
+//   }
+//   frequencyCounter1 = {}
+//   for(let value of str1){
+//     frequencyCounter1[value] = (frequencyCounter1[value] || 0) + 1
+//   }
+//   frequencyCounter2 = {}
+//   for(let value of str2){
+//     frequencyCounter2[value] = (frequencyCounter2[value] || 0) + 1
+//   }
+//   for(let key in frequencyCounter1){
+//     if(frequencyCounter1[key] !== frequencyCounter2[key]){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// reuslt = validAnagram("hello","ollehw")
+// console.log(reuslt)
+
+// Task 2D array ---------------------------------------------------------------------
+
+// function chunkyMonkey(array,size){
+//   result = []
+//   for(i=0;i<array.length;i+=size){
+//     result.push(array.slice(i,i+size))
+//   }
+//   return result;
+// }
+// testing = chunkyMonkey([1,2,3,4,5,6],2)
+// console.log(testing)
+
+// ForEach loop ---------------------------------------------------
+
+// array = [1,2,3,4,5]
+// array.forEach(function(arr,index,idk){
+//   console.log(arr,index,idk)
+// })
