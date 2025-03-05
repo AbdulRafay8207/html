@@ -6,10 +6,17 @@
 
 // Dom Exercise: 2 ---------------------------------------------------------------------------
 
+<<<<<<< HEAD
 // mytext = document.querySelector("#paragraph")
 // mytext.textContent = "New paragraph text"
 
 // myheading = document.querySelector("#heading")
+=======
+// mytext = document.querySelector("paragraph")
+// testing = mytext.textContent = "New paragraph text"
+
+// myheading = document.querySelector("heading")
+>>>>>>> 47ffe87191036ee6943eb64e29d31385df9508d9
 // myheading.innerText = "New heading text"
 
 // Adding Elements to the DOM-----------------------------------------------------------------
@@ -21,6 +28,7 @@
 // Dom Exercise:4------------------------------------------------------------------------------------
 
 // p = document.createElement("p")
+<<<<<<< HEAD
 // textofp = document.createTextNode("Hello Students")
 // p.appendChild(textofp)
 // p.style.color = "green"
@@ -57,3 +65,10 @@
   // timeout = setTimeout(function(){clearInterval(interval) 
   //   console.log("code ended")
   // }, 1000*10)
+=======
+// tetxNode = document.createTextNode("hellostudents")
+// p.appendChild(textNode)
+// p.style.color = "green"
+// p.style.fontSize = "20px"
+// document.getElementById("content-section").appendChild(p)
+>>>>>>> 47ffe87191036ee6943eb64e29d31385df9508d9
