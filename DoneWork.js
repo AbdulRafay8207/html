@@ -29,6 +29,45 @@
 
 // PROBLEM----------------------------------------------------------------------------------------------------------------
 
+// Date and Time in JavaScript------------------------------------------------------------------------------------
+
+// currentDate = new Date(2007,1,8,5,15,30)
+// console.log(currentDate)
+
+// This-------------------------------------------------------------------------------------------------
+
+// const car = {
+//     make: 'Toyota',
+//     model: 'Corolla',
+//     getDetails: function() {
+//       return `This car is a ${make} ${model}.`;    //this.make = car.make and this.model = car.model 
+//     }
+//   };
+  
+//   console.log(car.getDetails());  // Outputs: This car is a Toyota Corolla.
+  
+  // obj = {
+  //   Name:"Rafay",
+  //   age:18,
+  //   detail: function(){ return `This is my name ${this.Name} and this is my age ${this.age}`}
+  // }
+  // console.log(obj.detail())
+
+  // setInterval and setTimeout Method------------------------------------------------------------
+
+  // interval = setInterval(function(){console.log("Testing 123")}, 3000)
+  // timeout = setTimeout(function(){clearInterval(interval) 
+  //   console.log("code ended")
+  // }, 1000*10)
+  
+  // Exercise---------------------------------------------------------------------
+
+  // tetxNode = document.createTextNode("hellostudents")
+  // p.appendChild(textNode)
+  // p.style.color = "green"
+  // p.style.fontSize = "20px"
+  // document.getElementById("content-section").appendChild(p)
+
 // Deleting element from DOM--------------------------------------------------------------------------------
 
 // THis is used to remove child from an element
