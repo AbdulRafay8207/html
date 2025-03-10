@@ -6,10 +6,10 @@
 
 // Dom Exercise: 2 ---------------------------------------------------------------------------
 
-// mytext = document.querySelector("paragraph")
+// mytext = document.querySelector("#paragraph")
 // testing = mytext.textContent = "New paragraph text"
 
-// myheading = document.querySelector("heading")
+// myheading = document.querySelector("#heading")
 // myheading.innerText = "New heading text"
 
 // Adding Elements to the DOM-----------------------------------------------------------------
@@ -26,8 +26,6 @@
 // p.style.color = "green"
 // p.style.fontSize = "20px"
 // document.getElementById("content-section").appendChild(p)
-
-// PROBLEM----------------------------------------------------------------------------------------------------------------
 
 // Date and Time in JavaScript------------------------------------------------------------------------------------
 
@@ -79,24 +77,133 @@
 // heading.remove()
 
 // Event Listener--------------------------------------------------------------------------------
+// Event type "Click"
 
 // section = document.getElementById("sec")
 // p = document.getElementById("para")
-// function action(e){
+// function action(a){
 //   p.remove()
-//   console.log("Child is removed",e)
+//   console.log("Child is removed",a)
 // }
-// p.addEventListener("click",action)
+// p.addEventListener("click" ,action)
+// *************************************************************************************************
+// button = document.getElementById("mybutton")
+// function action(){
+//     console.log("button was clicked!")
+//     console.log("mouse x:", event.clientX)
+//     console.log("mouse y:", event.clientY)
+// }
+// button.addEventListener("click",action)
+// *************************************************************************************************
+// Event type "Mouseover and mouseout"
 
-// function inputAction(e){
-//   console.log(e)
-//   console.log(input.value)
-//   h1.textContent = input.value
-//   h1.textContent = e.target.value
-//   h1.textContent = this.value
+// hoverDiv = document.getElementById("hoverdiv")
+// hoverDiv.addEventListener("mouseover", function(){
+//     hoverDiv.style.backgroundColor = "red"
+//     console.log(event.target)
+//     console.log(event.type)
+//     console.log(event.key)
+// },{once : true})
+
+// hoverDiv.addEventListener("mouseout", function(){
+//     hoverDiv.style.backgroundColor = ""
+// })
+// *************************************************************************************************
+// Event type "Keydown and Keyup"
+
+// input = document.getElementById("input")
+// h1 = document.getElementById("h1input")
+// input.addEventListener("keydown",function(){
+//     // console.log("Keydown event triggered!")
+//     // console.log("Event type:",event.type)
+//     // console.log("Event key:", event.key)
+//     h1.textContent = input.value
+// })
+
+// input.addEventListener("keyup",function(){
+//     h1.textContent = input.value
+//     console.log(this.value)
+// })
+// *************************************************************************************************
+//Event type "Input"
+
+// textinput = document.getElementById("textinput")
+// textinput.addEventListener("input", function(){
+//     console.log("input event triggered")
+//     console.log(event.target.value)
+//     console.log(event.type)
+// })
+
+
+// Event Listener Exercise Counter----------------------------------------------------------------------
+
+// buttonD = document.getElementById("buttonD")
+// buttonR = document.getElementById("buttonR")
+// buttonI = document.getElementById("buttonI")
+// h1 = document.getElementById("h1")
+
+// let count = 0
+
+// buttonD.addEventListener("click", function(){
+//   count--
+//   h1.textContent = count
+// })
+
+// buttonR.addEventListener("click", function(){
+//   count = 0
+//   h1.textContent = count
+// })
+
+
+// buttonI.addEventListener("click", function(){
+//   count++
+//   h1.textContent = count  
+// })
+
+// TODO APP PROJECT----------------------------------------------------------------------------------------
+
+// input = document.getElementById("input");
+// button = document.getElementById("button");  // Correct method
+// ul = document.getElementById("list");
+
+
+// function addtext(text){
+//   let list = document.createElement("li");  // Ensure let is used for scope
+//   list.textContent = text;
+
+//   let removebutton = document.createElement("span");
+//   removebutton.textContent = "X";
+//   removebutton.classList.add("remove");  // Correct classList
+
+//   removebutton.addEventListener("click",function(){
+//     list.remove()
+//   })
+
+//   list.appendChild(removebutton);
+//   ul.appendChild(list);
 // }
 
-// Assignment Counter
+// button.addEventListener("click", function(){
+//   let text = input.value.trim();  // Get the text from input
+//   if(text){
+//     addtext(text);  // Add the text to the list
+//     input.value = "";  // Clear the input field
+//   }
+// })
+
+// input.addEventListener("keypress", function(){
+//   if(event.key === "3"){  // If Enter is pressed
+//     let text = input.value.trim();  // Get the text from input
+//     if(text){
+//       addtext(text);  // Add the text to the list
+//       input.value = "";  // Clear the input field
+//     }
+//   }
+// });
+
+
+
+// Assignment Counter--------------------------------------------------------------------------------------
 
 // function Counter(initialValue){
 //   this.value = initialValue
@@ -105,7 +212,7 @@
 //   }
 //   this.increment = function(){}
 // }
-// counter = new Counter(0)
+// counter = new Counter()
 
 // Call back Function---------------------------------------------------------------------------------
 
@@ -159,6 +266,10 @@
 // action = (number) => number*2
 // result = arr.map(action)
 // console.log(result)
+//------OR-----------
+// arr = [1,2,3,4,5,6,7,8,9,10]
+// result = arr.map(number => number*2)
+// console.log(result)
 
 //MAP Exercise : 1
 
@@ -168,6 +279,31 @@
 //   {firstName:"Abdul", lastName:"Rafay"}
 // ]
 
-// action = (students) => students.firstName + " " + students.lastName
+// action = (student) => student.firstName + " " + student.lastName
 // result = students.map(action)
 // console.log(result)
+
+// Filter---------------------------------------------------------------------------------------------------
+
+// filter exercise 1 ----------------------------------------------------------------
+
+// numbers = [5,12,13,3,7]
+// action = (number) => number > 10 
+// result = numbers.filter(action)
+// console.log(result)
+
+// Map & Filter Combine ---------------------------------------------------------------------------
+
+  // students = [
+  //   {name:"Alice", score:52},
+  //   {name:"Bob", score:67},
+  //   {name:"Charlie", score:80},
+  //   {name:"David", score:45}
+  // ]
+
+  // action = (student) => student.score >= 60
+  // result1 = students.filter(action)
+  // console.log(result1)
+
+  // result2 = result1.map(student => student.name.toUpperCase())
+  // console.log(result2)
