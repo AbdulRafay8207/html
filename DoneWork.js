@@ -307,3 +307,78 @@
 
   // result2 = result1.map(student => student.name.toUpperCase())
   // console.log(result2)
+
+  // Destruction of Arrayyy----------------------------------------------------------------------------------------
+
+  // car = {make: "Toyota", model: "Camry"}
+  // const {make, model} = car
+  // console.log(make, model)
+
+  // data = ["Alice", 30, "New York"]
+  // const [Name,age,city] = data
+  // console.log(Name,age,city)
+
+  // Asynchronous Code Exercise 1-------------------------------------------------------------------------------
+
+  let data
+
+//   function fetchData(callback){
+//     setTimeout(()=>{
+//       data = {name:"John", age: 30}
+//       callback(data)
+//     },2000)
+//   }
+//   function a(data){
+//     console.log(data)
+//   }
+
+// // console.log(data)
+
+// fetchData(a)
+
+// console.log("Data is being fetched...")
+
+// Asynchronous Exercise 2 ---------------------------------------------------------------------------------------
+
+
+function orderPizza(cb){
+  setTimeout(() => {
+    console.log("Step1, ordered")
+    cb()
+  }, 4000);
+}
+
+function preparingPizza(cb){
+  setTimeout(() => {
+    console.log("Step2, prepared")
+    cb()
+  }, 3000);
+}
+
+function served(){
+  setTimeout(() => {
+    console.log("Step3, served")
+  }, 1000);
+}
+
+serveCB = () => servePizza()
+prepareCB = () => preparePizza(servePizza)
+
+served(prepareCB)
+
+// Promise----------------------------------------------------------------------------------
+
+// callback = (resolve, reject) => {
+// setTimeout(() => {
+//   success = false
+//   if(success){
+//     resolve("Fullfilled")
+//   } else{
+//     reject("Rejected")
+//   }},2000)
+// }  
+
+// promise = new Promise(callback)
+// console.log(promise)
+
+// promise.then((t) => console.log(t)).catch((f) => console.error(f))
