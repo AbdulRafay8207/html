@@ -521,198 +521,147 @@
 
 // My learning way of Promises*-------------------------------------------------------------------------------------
 
-let myPromise = new Promise((resolve, reject) => {
-  success = false
-
-  if(success){
-    resolve("the operation was successful1")
-  } else {
-    reject("Something went absolutely wrong!")
-  }
-}
-)
-// console.log(myPromise)
-
-myPromise
-.then(result => { 
-  console.log(result)
-})
-.catch(result => {
-  console.log(result)
-})
-
-//Absolutely! Let's dive into Promises in JavaScript in the simplest and most beginner-friendly way possible. I'll break it down step by step.
-
-// What is a Promise?
-// In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows us to handle asynchronous code in a much cleaner and more readable way than using callbacks.
-
-// In other words, a Promise is like a promise made by someone to do something later. You are waiting for the promise to be fulfilled or rejected.
-
-// The States of a Promise
-// A Promise can be in one of three states:
-
-// Pending: The promise is still being processed, it hasn’t been fulfilled or rejected yet.
-// Fulfilled: The asynchronous operation was successful, and the promise is "resolved."
-// Rejected: The asynchronous operation failed, and the promise is "rejected."
-// Think of it like this:
-
-// A pending promise is like you ordering a pizza but waiting for it to be delivered.
-// A fulfilled promise is like the pizza being delivered and you eating it.
-// A rejected promise is like the pizza being canceled or failed (maybe the restaurant ran out of stock).
-// Creating a Promise
-// You can create a Promise using the new Promise() constructor. Here's a very basic example:
-
-// javascript
-// Copy
 // let myPromise = new Promise((resolve, reject) => {
-//   let success = true; // Try changing this to false to see rejection
+//   success = false
 
-//   if(success) {
-//     resolve("The operation was successful!");  // This means the promise is fulfilled
+//   if(success){
+//     resolve("the operation was successful1")
 //   } else {
-//     reject("Something went wrong!");  // This means the promise was rejected
+//     reject("Something went absolutely wrong!")
 //   }
-// });
-// What’s happening here?
-// resolve is called when the operation succeeds. It indicates that the promise is fulfilled.
-// reject is called when the operation fails. It indicates that the promise is rejected.
-// Using Promises
-// Once a promise is created, you can handle the result using .then() for success and .catch() for errors.
-
-// Example: Handling Fulfilled and Rejected Promises
-// javascript
-// Copy
-// let myPromise = new Promise((resolve, reject) => {
-//   let success = true;
-
-//   if(success) {
-//     resolve("The operation was successful!");
-//   } else {
-//     reject("Something went wrong!");
-//   }
-// });
-
-// // Handle the result using .then() and .catch()
+// }
+// )
 // myPromise
-//   .then(result => {
-//     console.log(result);  // This runs if the promise is fulfilled
-//   })
-//   .catch(error => {
-//     console.log(error);  // This runs if the promise is rejected
-//   });
-// Explanation:
-// If success is true, the promise is fulfilled, and .then() is called with the success message.
-// If success is false, the promise is rejected, and .catch() is called with the error message.
-// Output (if success is true):
-// nginx
-// Copy
-// The operation was successful!
-// Output (if success is false):
-// nginx
-// Copy
-// Something went wrong!
-// Promise Chaining
-// You can chain multiple .then() calls to handle multiple steps of an asynchronous operation.
+// .then(result => {
+//   console.log(result)
+// })
+// .catch(result => {
+//   console.log(result)
+// })
+//**************************************************************************************************** */
 
-// Example:
-// javascript
-// Copy
-// let myPromise = new Promise((resolve, reject) => {
-//   let success = true;
+// Promise Chain-------------------------------------------------------
 
-//   if(success) {
-//     resolve("Step 1: Task completed.");
-//   } else {
-//     reject("Something went wrong in Step 1.");
+// myPromise = new Promise((resolve, reject) => {
+//   let success = true
+//   if(success){
+//     resolve("Setp 1 is done!")
+//   } else{
+//     reject("Something went wrong!")
 //   }
-// });
+// })
+// myPromise.then(result => {
+//   setTimeout(() => {console.log(result)},2000)
+//   return "Step 2 is done"
+// }).then(result => {
+//   setTimeout(() => {console.log(result)},3000)
+//   return "Step 3 is done"
+// }).then(result => {
+//   setTimeout(() => {console.log(result)},4000)
+// }).catch(result => {
+//   console.log(result)
+// })
+// console.log("Please wait...")
 
-// myPromise
-//   .then(result => {
-//     console.log(result);  // Step 1: Task completed
-//     return "Step 2: Proceeding to next task";  // Return another value to pass to the next .then()
-//   })
-//   .then(result => {
-//     console.log(result);  // Step 2: Proceeding to next task
-//     return "Step 3: Task done!";
-//   })
-//   .then(result => {
-//     console.log(result);  // Step 3: Task done!
-//   })
-//   .catch(error => {
-//     console.log(error);  // If any error occurs, it will be caught here
-//   });
-// Explanation:
-// The first .then() handles the result from the promise.
-// The second .then() takes the returned value from the previous .then() and proceeds further.
-// Each .then() returns a new value or another promise, allowing you to chain them.
-// .catch() is used at the end to handle any errors that might occur in the chain.
-// Using Promise.all()
-// Sometimes you might need to wait for multiple promises to complete before doing something. You can use Promise.all() to wait for several promises to resolve at the same time.
+// promise all-------------------------------------------------------------
 
-// Example:
-// javascript
-// Copy
 // let promise1 = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve("First task completed"), 1000);
-// });
-
+//    step1 = true
+//   setTimeout(() => {if(step1){
+//     resolve("First step done")}else{
+//       reject("First step fail")
+//     }} ,1000)
+// })
+// step2 = true
 // let promise2 = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve("Second task completed"), 2000);
-// });
-
+//   setTimeout(() => {if(step2){
+//     resolve("Second step done")}else{
+//       reject("Second step fail")
+//     }},2000)
+// })
+// step3 = true
 // let promise3 = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve("Third task completed"), 3000);
-// });
+//   setTimeout(() => {if(step3){
+//     resolve("Third step done")}else{
+//       reject("Third step fail")
+//     }},3000)
+// })
 
 // Promise.all([promise1, promise2, promise3])
-//   .then(results => {
-//     console.log(results);  // Prints an array with all results once all promises are resolved
-//   })
-//   .catch(error => {
-//     console.log(error);  // If any of the promises fails, this will run
-//   });
-// Explanation:
-// Promise.all() takes an array of promises and returns a new promise that resolves once all promises are resolved.
-// It returns an array of results once all promises are fulfilled.
-// If any promise fails, the entire Promise.all() will reject and go to .catch().
-// Output:
-// After 3 seconds:
+// .then(result => {
+//   console.log(result)
+// }).catch(error => {
+//   console.log(error)
+// })
 
-// css
-// Copy
-// ["First task completed", "Second task completed", "Third task completed"]
-// Using async/await with Promises
-// The async/await syntax is a more modern and cleaner way of working with promises. It looks much more like regular synchronous code.
+// Async Promise-----------------------------------------------------------------
 
-// async makes a function return a promise.
-// await waits for the promise to resolve and gives you the result.
-// Example:
-// javascript
-// Copy
-// async function fetchData() {
-//   let result = await myPromise;  // Waits for the promise to resolve
-//   console.log(result);  // Logs the result when the promise is fulfilled
+// async function fetchData(){
+//   result = await myPromise
+  
 // }
 
-// let myPromise = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve("Data fetched successfully!"), 2000);
-// });
+// myPromise = new Promise((resolve, reject) => {
+//   success = false
+//   setTimeout(() => {                            // This method work but not a right way
+//     if(success){
+//       resolve("Data fetched successfully")
+//     }else{
+//       reject("Error")
+//     }
+//   }, 2000);
+// })
 
-// fetchData();  // This calls the async function
-// Explanation:
-// The await keyword pauses the execution of the async function until the promise is resolved.
-// It’s like writing synchronous code, but you’re still handling asynchronous operations.
-// Summary:
-// A Promise is an object that represents the result of an asynchronous operation.
-// A promise can be fulfilled (successful), rejected (failed), or still pending.
-// You can handle the result of promises using .then(), .catch(), and .finally().
-// You can chain multiple .then() calls to perform several asynchronous tasks one after another.
-// async/await provides a cleaner way to handle promises, making asynchronous code look synchronous.
-// Exercise:
-// Try the following:
+// fetchData().then(result => console.log(result))
+// .catch(error => console.log(error))
 
-// Create a promise that resolves after 3 seconds with the message "Task completed!".
-// Chain a .then() to log that message.
-// Add a .catch() to handle any potential errors.
-// Let me know if you'd like more clarification or examples!
+// Right way***************************************************
+// function addition(a,b){
+//   sum = a+b
+//   console.log(sum)
+// }
+
+// async function fetchData(callback){
+//   try{
+//     result = await myPromise
+//     callback(9,1)
+//   console.log(result)
+// } catch (error) {
+//   console.log(error)
+// }
+// } 
+
+
+// myPromise = new Promise((resolve, reject) => {
+//   success = false
+//   setTimeout(() => {                            
+//     if(success){
+//       resolve("Data fetched successfully")
+//     }else{
+//       reject("Error")
+//     }
+//   }, 2000);
+// })
+// fetchData(addition)
+
+// Promise Exercise-------------------------------------
+
+function orderPizza(cb){
+    setTimeout(() => {
+      console.log("Step1, ordered")
+      cb()
+    }, 4000);
+  }
+  
+  function preparingPizza(cb){
+    setTimeout(() => {
+      console.log("Step2, prepared")
+      cb()
+    }, 3000);
+  }
+  
+  function served(){
+    setTimeout(() => {
+      console.log("Step3, served")
+    }, 1000);
+  }
