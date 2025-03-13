@@ -646,22 +646,55 @@
 
 // Promise Exercise-------------------------------------
 
-function orderPizza(cb){
-    setTimeout(() => {
-      console.log("Step1, ordered")
-      cb()
-    }, 4000);
-  }
+// function orderPizza(){
+//     setTimeout(() => {
+//       console.log("Step1, ordered")
+//     }, 4000);
+//   }
   
-  function preparingPizza(cb){
-    setTimeout(() => {
-      console.log("Step2, prepared")
-      cb()
-    }, 3000);
-  }
+//   function preparingPizza(){
+//     setTimeout(() => {
+//       console.log("Step2, prepared")
+//     }, 3000);
+//   }
   
-  function served(){
-    setTimeout(() => {
-      console.log("Step3, served")
-    }, 1000);
-  }
+//   function served(){
+//     setTimeout(() => {
+//       console.log("Step3, served")
+//     }, 1000);
+//   }
+
+// FETCH------------------------------------------------------------------------------------------------------
+
+// async function fetchData(){
+//   const url = "https://jsonplaceholder.typicode.com/posts"
+//   // fetch(url)
+//   // .then((res) => res.json())
+//   // .then((data) => console.log(data))
+//   // .catch((e) => console.error(e))
+
+//   try{
+//     const response = await fetch(url)
+//       const data = await response.json()
+//       console.log(data)
+//   } catch(error){
+//     console.log(error)
+//   }
+// }
+
+//**************************************************************** */
+
+async function(){
+  response = fetch("http://localhost:3000/users")
+  data = await response.json()
+}
+
+function parseJsonToHtml(data){
+  return data.map((user) => {
+    return `<tr>
+    <td>${user.id}</td>
+    <td></td>
+    <td></td>`
+  })
+}
+  
