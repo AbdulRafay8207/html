@@ -521,8 +521,17 @@
 
 // My learning way of Promises*-------------------------------------------------------------------------------------
 
+// async function testing(){
+//   try{
+//     success = await myPromise
+//     console.log(success)
+//   } catch(error){
+//     console.log(error)
+//   }
+// }
+
 // let myPromise = new Promise((resolve, reject) => {
-//   success = false
+//   success = true
 
 //   if(success){
 //     resolve("the operation was successful1")
@@ -531,6 +540,7 @@
 //   }
 // }
 // )
+// testing()
 // myPromise
 // .then(result => {
 //   console.log(result)
@@ -646,23 +656,99 @@
 
 // Promise Exercise-------------------------------------
 
-// function orderPizza(){
-//     setTimeout(() => {
-//       console.log("Step1, ordered")
-//     }, 4000);
-//   }
+function orderPizza() {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res("Step 1. Order");
+        }, 4000);
+    });
+}
+ 
+ 
+function preparePizza() {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res("Step 2. Preparing");
+        }, 3000);
+    })
+}
+ 
+ 
+function servePizza() {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res("Step 3. Serving");
+        }, 1000);
+    });
+}
+
+// orderPromise = orderPizza()
+// orderPizza().then((result) => {
+//   console.log(result)
   
-//   function preparingPizza(){
-//     setTimeout(() => {
-//       console.log("Step2, prepared")
-//     }, 3000);
+//   preparePromise = preparePizza()
+//   preparePromise.then((result) => {
+//     console.log(result)
+
+//     servePromise = servePizza()
+//     servePromise.then((result) => {
+//       console.log(result)
+//     })
+//   })
+// })
+
+//-----------------------------OR-----------------------------------------
+
+// Chain Method
+
+// orderPizza().then((result) => {
+//   console.log(result)
+//   return preparePizza ()
+// })
+// .then((result) => {
+//   console.log(result)       
+//   return servePizza()
+// })
+// .then((result) => {
+//   console.log(result)
+// })
+
+//------------------------------OR---------------------------------------
+
+// Async/awaits Method
+
+// async function Pizza(){
+//   try{
+//     order = await orderPizza()
+//     console.log(order)
+
+//     prepare = await preparePizza()
+//     console.log(prepare)
+                                                    
+//     serve = await servePizza()                // Better Approach
+//     console.log(serve)
+//   } catch(e){
+//     console.log(e)
+//   } finally{
+//     console.log("Ordered Done!")
 //   }
-  
-//   function served(){
-//     setTimeout(() => {
-//       console.log("Step3, served")
-//     }, 1000);
-//   }
+// }
+// Pizza()
+// console.log("Please wait your order is getting ready...")
+
+// Json-----------------------------------------------------------------------------
+
+// JSON To JavaScript Object
+
+// let jsonString = '{"name": "Alice", "age": 30}';
+// let obj = JSON.parse(jsonString); // Convert JSON to JS object
+// console.log(obj); 
+
+// //JavaScript to Json
+
+// person = {name:"alice", age: 25}
+// jsondata = JSON.stringify(person)
+// console.log(jsondata)
 
 // FETCH------------------------------------------------------------------------------------------------------
 
@@ -684,17 +770,17 @@
 
 //**************************************************************** */
 
-async function(){
-  response = fetch("http://localhost:3000/users")
-  data = await response.json()
-}
+// async function(){
+//   response = fetch("http://localhost:3000/users")
+//   data = await response.json()
+// }
 
-function parseJsonToHtml(data){
-  return data.map((user) => {
-    return `<tr>
-    <td>${user.id}</td>
-    <td></td>
-    <td></td>`
-  })
-}
-  
+// function parseJsonToHtml(data){
+//   return data.map((user) => {
+//     return `<tr>
+//     <td>${user.id}</td>
+//     <td></td>
+//     <td></td>`
+//   })
+// }
+

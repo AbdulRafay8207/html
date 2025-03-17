@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Apply styles to the entire page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; 
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Center the quiz form inside a container */
+#quiz {
+    
+    
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+/* Style the heading */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Style labels */
+label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style radio buttons and spacing */
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Style submit button */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h2>Quiz</h2>
+    <form id="quiz">
+        <label>What is 2 + 2:</label> <br>
+        <input type="radio" name="q1" value="4">4 <br>
+        <input type="radio" name="q1" value="3">3 <br>
+        <input type="radio" name="q1" value="6">6 <br>
+
+        <label>What is the capital of Pakistan:</label> <br>
+        <input type="radio" name="q2" value="Lahore">Lahore <br>
+        <input type="radio" name="q2" value="Karachi">Karachi <br>
+        <input type="radio" name="q2" value="Islamabad">Islamabad <br>
+
+        <label>What is the national sport of Pakistan</label> <br>
+        <input type="radio" name="q3" value="Cricket">Cricket <br>
+        <input type="radio" name="q3" value="Football">Football <br>
+        <input type="radio" name="q3" value="Hockey">Hockey <br>
+
+        <label>What is 2 * 10:</label> <br>
+        <input type="radio" name="q4" value="7">7 <br>
+        <input type="radio" name="q4" value="20">20 <br>
+        <input type="radio" name="q4" value="18">18 <br>
+
+        <button type="submit">submit</button>
+    </form>
+</div>
+    <script src="./javascript.js"></script>
+</body>
+</html>
