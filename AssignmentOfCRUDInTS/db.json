@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "Abdul Rafay",
+      "major": "Computer",
+      "id": "cce2"
+    },
+    {
+      "id": "245c",
+      "name": "Ahmed",
+      "major": "Bio"
+    },
+    {
+      "id": "7dcc",
+      "name": "Rafay",
+      "major": "Science"
+    },
+    {
+      "id": "6157",
+      "name": "Another User",
+      "major": "user"
+    }
+  ]
+}
