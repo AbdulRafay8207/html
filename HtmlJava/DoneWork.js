@@ -656,31 +656,31 @@
 
 // Promise Exercise-------------------------------------
 
-function orderPizza() {
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res("Step 1. Order");
-        }, 4000);
-    });
-}
+// function orderPizza() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("Step 1. Order");
+//         }, 4000);
+//     });
+// }
  
  
-function preparePizza() {
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res("Step 2. Preparing");
-        }, 3000);
-    })
-}
+// function preparePizza() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("Step 2. Preparing");
+//         }, 3000);
+//     })
+// }
  
  
-function servePizza() {
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res("Step 3. Serving");
-        }, 1000);
-    });
-}
+// function servePizza() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("Step 3. Serving");
+//         }, 1000);
+//     });
+// }
 
 // orderPromise = orderPizza()
 // orderPizza().then((result) => {
@@ -784,3 +784,77 @@ function servePizza() {
 //   })
 // }
 
+// fixing------------------------------------------------------------
+
+//Regular Expression---------------------------------------------------------------------------------------------
+
+// const str = "I am learning JavaScript, We can build web app using JavaScript"
+// const pattern = /Javascript/gi
+// // const result = pattern.test(str)
+// // console.log(result)
+
+// // console.log(str.replace("JavaScript", "python")) // first method 
+
+
+// const result2 = str.replace(pattern, "phython")
+// console.log(result2)
+
+// Exercise : 1-**************************************************************************************************************************************
+
+// function spinalCase(abc){
+//     abc.toLowerCase()
+//     pattern = /\s|_/gi
+//     result = abc.replace(pattern, "-")
+//     console.log(result);
+// }
+// spinalCase("AVAS ASNDF ASNF")
+
+// Recursion ---------------------------------------------------------------------------------------------------------------------------------------------
+// function printNum(number){
+//     if(number == 0)return;
+//     console.log(number)
+//     printNum(number-1)
+// }
+// console.log(printNum(10))
+
+//*********************************************************************************************************** */
+
+// function printNum(number){
+//     if(number == 0)return;
+//     printNum(number-1)
+//     console.log(number)
+// }
+// console.log(printNum(10))
+
+// function factorial(number){
+//     if(number == 0) return "1";
+//     console.log(number)
+//     return number * factorial(number-1)     //Understand
+// }
+// console.log(factorial(5));
+
+//Closure-------------------------------------------------------------------------------------------------
+// function createGreeting(greeting){
+//     return function (name) {
+//         return `${greeting} ${name}`
+//     }
+// }
+// const sayHi = createGreeting("hi")
+// const sayHello = createGreeting("hello")
+
+// const result1 = sayHi("Abdul")
+// const result2 = sayHello("Rehman")
+
+// console.log(result1)
+// console.log(result2)
+
+//Exercise -------------------------------------------------------------------
+
+function multiply(a){
+    return function (b){
+        return a*b
+    }
+}
+result = multiply(2)    // understanding qud tri
+result2 = result(2)
+console.log(result2)
