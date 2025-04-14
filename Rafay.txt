@@ -1,0 +1,170 @@
+<!DOCtYPE HTML>
+<head>
+	<title>Practice HTML</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<p><b><i><em><span style="color: blue"> List of Vegetabl and Fruits </b></i></em></span></p>
+	<h2>List of Fruits</h2>
+	
+	<ul>
+		<li>Apple</li>
+		<li>Mango</li>
+		<li>Grapes</li>
+	</ul>
+	
+	<h3>List of Street Foods</h3>
+	
+	<ul>
+			<li>Pizza
+		<ol>
+			<li>BBQ Pizza</li>
+			<li>Cheese Pizza</li>
+		</ol>
+		</li>
+			<li>burger
+		<ol>
+			<li>Chesse Burger</li>
+			<li>Extra Large Burger</li>
+		</ol>
+		</li>
+	</ul>
+
+<dl>
+	<dt>Coffe:</dt>
+	
+		<dd>Hot Coffee</dd>
+		<dd>Cold Coffee</dd>
+		
+	<dt>Juice:</dt>
+		
+		<dd>Apple Juice</dd>
+		<dd>Mango juice</dd>
+</dl>
+
+<img src="https://media.istockphoto.com/id/1253099922/photo/assortment-of-fresh-fruits-and-vegetables-juices-in-rainbow-colors.jpg?s=612x612&w=0&k=20&c=lFC0lAcR0FoPegoMTuJxc3fEAISbJVwZ1VmWNHzVEX8=" Width="200px" height="300px"> <br>
+
+<a href="https://www.google.com">Our website</a> <br> <br>
+
+	
+<table border="5">
+
+<colgroup>
+		
+		<col span="2" style="background-color: lightgray">
+		<col span="3" style="background-color:lightblue">
+</colgroup>
+ 	 
+	<thead>
+	<tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Qty</th>
+		<th>Rupees</th>
+		<th>Amount</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	<tr>
+		<td>1</td>
+		<td>Apple</td>
+		<td>2</td>
+		<td>10</td>
+		<td>20</td>
+	</tr>
+	
+	<tr>
+		<td>2</td>
+		<td>Mango</td>
+		<td>1</td>
+		<td>5</td>
+		<td>5</td>
+	</tr>
+	
+	<tr>
+		<td>3</td>
+		<td>Grapes</td>
+		<td>3</td>
+		<td>10</td>
+		<td>30</td>
+	</tr>
+	<tbody>
+	
+	<tfoot>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>Total</td>
+		<td>55</td>
+	</tr>
+	</tbody>
+	
+</table> <br> <br>
+
+<form action="/action_page.php">
+		
+	<fieldset>
+		<legend>Personal Info: </legend>
+			<lable for="fname">First Name: </lable> <br>
+				<input type="text" id="fname" name="fname"> <br>
+			<lable for="lname">Last Name: </lable> <br>
+				<input type="text" id="lname" name="lname"> <br>
+			<lable for="email">Email: </lable> <br>
+				<input type="email" id="email" name="Email"> <br>
+			<lable for="password">Password: </lable> <br>
+				<input type="password" id="password" name="Password"> <br>
+			<lable for="tel">Phone Number: </lable> <br>
+				<input type="tel" id="tel" name="PhoneNumber"> <br> <br>
+	
+	
+		<legend>Choose your favourite food: </legend>
+			<input type="radio" id="food1" name="fav_food" value="pizza">
+				<lable for="food1">Pizza </lable> <br>
+			<input type="radio" id="food2" name="fav_food" value="burger">
+				<lable for="food2">Burger </lable> <br>
+			<input type="radio" id="food3" name="fav_food" value="pasta">
+				<lable for="food3">Pasta </lable> <br> <br>
+	
+	
+	
+		<legend>Choose your favourite car: </legend>
+			<input type="checkbox" id="car1" name="fav_car" value="BMW">
+				<lable for="car1">BMW </lable><br>
+			<input type="checkbox" id="car2" name="fav_car" value="Audi">
+				<lable for="car2">Audi </lable> <br>
+			<input type="checkbox" id="car3" name="fav_car" value="GTR">
+				<lable for="car3">GTR </lable> <br>
+			<input type="checkbox" id="car4" name="fav_car" value="Mustang">
+				<lable for="car4">Mustang </lable> <br>
+			<input type="checkbox" id="car5" name="fav_car" value="Honda">
+				<lable for="car5">honda </lable> <br> <br>
+	
+		<lable for="sports">Choose your favourite sport </lable> <br>
+			<select id="sprots" name="fav_sport"> 	
+				<option value="cricket">Cricket </option>
+				<option value="football">Football </option>
+				<option value="hoceky">Hockey </option>
+				<option value="baseball">Baseball </option>
+				<option value="icehokcey">IceHockey </option>
+			</select> <br>
+		<h4>Suggestion: </h4>
+			<textarea name="message" cols="10" rows="10"> </textarea> <br>
+			<h4>Select your favourtie color</h4>
+			<input type="color"> <br> <br>
+			
+		<button type="button" onclick="alert ('Congragulation! you completed the form')">Click on me! </button> <br> <br>
+		
+		<input type="image" src="https://media.istockphoto.com/id/1253099922/photo/assortment-of-fresh-fruits-and-vegetables-juices-in-rainbow-colors.jpg?s=612x612&w=0&k=20&c=lFC0lAcR0FoPegoMTuJxc3fEAISbJVwZ1VmWNHzVEX8=" Width="200px" height="300px"><br> <br>
+		
+		<input type="submit">
+		<input type="reset">
+	</fieldset>
+</form>
+<br> <br>
+
+<iframe src="www.google.com" description	
+	
+</body>
+</html>

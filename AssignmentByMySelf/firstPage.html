@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f4f4f4f5;
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+/* Style the container div */
+#userInfoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgb(0, 0, 0), -4px -4px 10px rgb(0, 0, 0);
+    width: 350px;
+}
+
+
+/* Style the form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Style labels */
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Style inputs */
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Style submit button */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Details</title>
+</head>
+<body>
+    <div id="userInfoDiv">
+    <h2>Enter Your Details</h2>
+    <form id="userInfo">
+        <label>Enter your name:</label> <br>
+        <input type="text" id="name" placeholder="Enter your name"> <br> <br>
+    
+        <label id="labelTwo">Enter your email</label> <br>
+        <input type="email" id="email" placeholder="Enter your email"> <br> <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+    <script src="./javascript.js"></script>
+</body>
+</html>

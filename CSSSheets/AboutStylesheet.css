@@ -1,0 +1,29 @@
+.heads{
+    font-size: 100px;
+    background-color: blue;
+    color: black;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+.apara{
+    font-size: 25px;
+    background-color: brown;
+    color: blueviolet;
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+    text-align: center;
+    border: 10px solid red;
+}
+.navstyle{
+    background-color: #333;
+            text-align: center;
+}
+.astyle{
+    color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 25px;
+}

@@ -1,0 +1,33 @@
+.heading {
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-size: 100px;
+    margin: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px;
+    
+}
+.para{
+    border: 10px solid chartreuse;
+    text-align: center;
+    background-color: lightslategray;
+    color: aquamarine;
+    margin: 40px;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navstyle{
+    background-color: #333;
+            text-align: center;
+}
+.astyle{
+    color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 25px;
+}
+.astyle:hover{
+    background-color: lightslategray;
+}
