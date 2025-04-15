@@ -856,3 +856,97 @@
   // result = multiply(2)    
   // result2 = result(2)
   // console.log(result2)
+
+  // Export and Import--------------------------------------------------------------------------------------------------------------
+
+  // Default Export*************************************************************************
+  // function multi(value){
+  //   return value * value
+  // }
+  // export default multi
+
+  // //Named Export*************************************************************************
+
+  // export function addition(a,b){
+  //   return a+b
+  // }
+  
+  // Constructor Function----------------------------------------------------------------------------------------------
+
+  //Before we use********************************************************************************
+
+  // function product(title, price){
+  //   this.title = title
+  //   this.title = price
+
+  //   this.showDetails = function(){
+  //     console.log(`${this.title} is Rs ${this.price}`)
+  //   }
+  // }
+
+  // const product1 = new product("laptop", 50000)
+  // const product2 = new product("Headphone", 2500)
+
+  // console.log("product1", product1)
+  // console.log("product2", product2.showDetails())
+
+  //Constructor Method******************************************************************************
+
+  // class Animal{
+
+  //   constructor(name, sound){                 // Understand
+  //     this.name = name
+  //     this.sound = sound
+  //   }
+
+  //   speak(){
+  //     console.log(`${this.name} says ${this.sound}`);
+      
+  //   }
+  // }
+
+  // const dog = new Animal("dog", "Woof")
+  // dog.speak()
+
+  // const cat = new Animal("Cat", "Meow")
+  // cat.speak()
+
+  // Class Exercise 1 ************************************************************
+
+  // class Book{
+
+  //   constructor(title, author){
+  //     this.title = title
+  //     this.author = author
+  //   }
+
+  //   getDetails(){
+  //     return `this ${this.title} is written by ${this.author}`
+  //   }
+  // }
+
+  // result = new Book("Journey", "Abdul")
+  // console.log(result.getDetails())
+
+  //Class Exercise 2 HomeWork******************************************************************
+
+  // Class Inheritance--------------------------------------------------------------------------------------------------------------------------
+
+  // class Ebook extends Book {
+  //   constructor(title, author, fileSize){
+  //     super(title, author)
+  //     this.fileSize = fileSize
+  //   }
+                                                      // Understand
+  //   getDetails(){
+  //     return `${super.getDetails()} File Size: ${this,this.fileSize}MB`
+  //   }
+  // }
+
+  // const book4 = new Ebook("Digital Book" ,"Alice", "2")
+
+  // // console.log("Book4", book4)
+  // console.log("book4 details", book4.getDetails());
+  
+  
+  
