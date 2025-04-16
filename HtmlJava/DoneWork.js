@@ -877,7 +877,7 @@
 
   // function product(title, price){
   //   this.title = title
-  //   this.title = price
+  //   this.price = price
 
   //   this.showDetails = function(){
   //     console.log(`${this.title} is Rs ${this.price}`)
@@ -887,14 +887,16 @@
   // const product1 = new product("laptop", 50000)
   // const product2 = new product("Headphone", 2500)
 
-  // console.log("product1", product1)
-  // console.log("product2", product2.showDetails())
+  // console.log("product1", product2)
+  // product2.showDetails()
 
   //Constructor Method******************************************************************************
 
+  // Now we use-*****************************************
+
   // class Animal{
 
-  //   constructor(name, sound){                 // Understand
+  //   constructor(name, sound){                 
   //     this.name = name
   //     this.sound = sound
   //   }
@@ -930,6 +932,9 @@
 
   //Class Exercise 2 HomeWork******************************************************************
 
+  class Library{
+
+  }
   // Class Inheritance--------------------------------------------------------------------------------------------------------------------------
 
   // class Ebook extends Book {
@@ -937,9 +942,9 @@
   //     super(title, author)
   //     this.fileSize = fileSize
   //   }
-                                                      // Understand
+                                                      
   //   getDetails(){
-  //     return `${super.getDetails()} File Size: ${this,this.fileSize}MB`
+  //     return `${super.getDetails()} File Size: ${this.fileSize}MB`
   //   }
   // }
 
