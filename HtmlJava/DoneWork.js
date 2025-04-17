@@ -932,9 +932,21 @@
 
   //Class Exercise 2 HomeWork******************************************************************
 
-  class Library{
+  // class Library{
+  //   constructor(){
+  //     this.Books = []
+  //   }
 
-  }
+  //   addBook(Book){
+  //     this.Books.push(Book)                        //Need to done 
+  //   }  
+  // }
+  // book1 = new Library()
+  // book1.addBook({title: "journey", author:"William"})
+  // console.log(book1);
+  
+  // addBook(book1)
+  
   // Class Inheritance--------------------------------------------------------------------------------------------------------------------------
 
   // class Ebook extends Book {
@@ -953,5 +965,189 @@
   // // console.log("Book4", book4)
   // console.log("book4 details", book4.getDetails());
   
+  // Constrcutor Function: Abstraction Method------------------------------------------------------------------------------------------
+
+  // class Human{
+  //   constructor(){
+  //     if(new.target === Human)                // Need to use if here else that new Junaid will create object using Human constructor
+  //       {throw new Error("Human constrctor")}
+  //   }
+
+  //   walk(){
+  //     throw new Error("Human error")
+  //   }
+  // }
+
+  // class Junaid extends Human {
+  //   #name;
+
+  //   constructor(name,age){
+  //     super()
+  //     this.name = name
+  //     this.age = age
+  //   }
+  //   walk(){
+  //     console.log("Junaid walk function");      // if this walk in not define here then it will use parent walk method
+      
+  //   }
+  // }
+  // human1 = new Junaid("rafay",18)
+  // human1.walk()
+  // console.log(human1);
   
-  
+
+// Static Method---------------------------------------------------------------
+
+// class MathUtile{
+//   static add(a,b){
+//     return a + b;
+//   }
+
+//   static multiply(a,b){
+//     return a*b;
+//   }
+// }
+// console.log(MathUtile.add(5,5))
+// console.log(MathUtile.multiply(5,2));
+
+// const testing = new MathUtile()   // Need to understand the Reason
+// console.log(testing.add(5,5));
+
+// Singleton Desing Pattern-------------------------------------------------------------------------
+
+// class Authentication{
+
+//   constructor(){
+//     if(Authentication.instance){
+//       return Authentication.instance
+//     }
+//     Authentication.instance = this
+//     this.isUserLogedIn = false
+//   }
+
+//   loginUser(){
+//     this.isUserLogedIn = true
+//     return "User Logged in"
+//   }
+
+//   logoutUser(){                    // Need to understand
+//     this.isUserLogedIn = false
+//     return "User logged out"
+//   }
+ 
+// }
+
+// const instance1 = new Authentication()
+// const instance2 = new Authentication()
+
+// console.log("Authentication instance ==>", instance1 === instance2);
+
+// console.log("login user", instance1.loginUser());
+// console.log("instance1", instance1);
+
+// Read-Only properties [object]-----------------------------------------
+
+//Obejct.freeze()*********************
+
+// const person = {
+//   name: "ali",
+//   age: 18
+// }
+// Object.freeze(person)
+
+// person.name = "fahad"
+// console.log(person)
+
+//Obejct.seal()************************************
+
+// const person = {        //Prevent adding or deleting but allow modifying
+//   name: "ali",  
+//   age: 18
+// }
+// Object.seal(person)
+
+// person.age = 20
+// person.job = "dev"
+// console.log(person)
+
+//Obejct.defineProperty()*************************************** //Need to understand
+
+// const student = {}
+
+// Object.defineProperty(student, "name",{
+//   value: "Alice",
+//   value2: 18,
+//   writable: false,
+//   configurable: false 
+// })
+
+// student.name = "Bob"
+// delete student.name
+
+// console.log(student.name);
+
+//Getter and Setter---------------------------------------------------
+// const product = {
+//   title: "laptop",
+//   price: 40000,
+//   get details(){
+//     return `${product.title} current price is ${product.price}`
+//   },
+//   set details(value){
+//     const parts = value.split(" ")
+//     this.title = parts[0]
+//     this.price = parts[parts.length - 1]
+//   }
+// }
+// product.details = "headphone price is 3000"
+
+// console.log("prodcut", product);
+// console.log("details", product.details);
+
+// using class****************************************************************************************
+
+// class product {
+//   constructor(title,price){
+//     this.title = title
+//     this.price = price
+//   }
+//   get details(){
+//     return `${this.title} current price is ${this.price}`
+//   }
+
+//   set details(value){
+//     const parts = value.split(" ")
+//     this.title = parts[0]
+//     this.price = parts[parts.length - 1]
+//   }
+// }
+// const testing = new product("headphone", 3000)
+// console.log(testing)
+// console.log(testing.details);
+
+//Js Object Dynamic Proeperty-----------------------------------------------------
+
+// let key = "dynamickey"
+// let value = "this is a dynamic value"
+
+// let obj = {
+//   [key] : value
+// }
+// console.log(obj.dynamickey);
+
+// Dynamic Exercise**********************************
+
+// let userInputs = [
+//   {key:"usernmae", value:"johndoe"},
+//   {key:"emial", value:"john@example.com"},
+//   {key:"password", value:"12345"}
+// ]
+
+// let user = {}               //Need to understand
+
+// for(const {key, value} of userInputs){
+//   user[key] = value
+// }
+// console.log(user);
+
+
