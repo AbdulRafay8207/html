@@ -104,8 +104,19 @@
 //   console.log(test)
 // }
 // printing(processData,[1])
-// Ternary Opeariotr----------------------------------------------------------------------------------
-// const isEven = (input:number):boolean  // NEED TO DONE
+// Ternary Operator----------------------------------------------------------------------------------
+// Example
+// let age:number = 18
+// let canVote: string = age >= 18 ? "yes" : "no"
+// console.log(canVote)
+//Ternary Opeartor Exercise----------------------------------------------------------------------------
+// let isEven = (input:number):boolean =>
+//     input % 2 == 0? true : false 
+// console.log(isEven(2));
+//Nested Ternary Operator----------------------------------------------------------------
+// let money:number = 99999
+// let result:string = money >= 100000 ? "buy macBook" : money <= 100000 ? "buy hp" : "buy lenovo"
+// console.log(result);
 // Spread Operator On Array----------------------------------------------------------------------------
 // const colors: string[] = ["red", "green", "blue"]
 // const favColors:string[] = ["orange", "purple"]
@@ -131,20 +142,25 @@
 // const {email,...rest} = user // Deleting email
 // console.log(rest);
 // ************************************************************************************************
-// function sum(x:number, y:number, z: number): number {
-//   return x+y+z
+// function sum(x:number, y:number, z: number):number {
+//   return x+y+z 
 // }
 // const number: [number,number,number] = [1,2,3]
 // console.log(sum(...number));
 //************************************************************************************************* */
 // function mergeArrays(array1: number[], array2: number[]): number[] {
-//   return {...array1,...array2}
-// }
-//                                                             // Need to solve
-// let array1:number[] = [1,2,3]
+//   return [...array1,...array2]
+// }                                                            
+// let array1:number[] = [1,2,3] 
 // let array2:number[] = [4,5,6]
 // let result = mergeArrays(array1,array2)
-// console.log(result);
+// console.log(result);`
+//Shallow copy Concept-+-------------------------------------------------------------------------
+// let colorsetone:string[] = ["red", 'blue']
+// let colorsettwo = colorsetone
+// colorsetone.push("green")
+// console.log("colorsetone",colorsetone);
+// console.log("colorsettwo", colorsettwo);
 //Rest Operator-------------------------------------------------------------------------------
 // type Bio = string | number
 // function bio(...args: Bio[]){
@@ -160,14 +176,88 @@
 //   return sum
 // }
 // console.log(sum(2+2))
-// ********************************************************************************************
+// Reduce Method-----------------------------------------------------------
 // const shoppingCart = [
 //   {name: "bread" , price: 120},
 //   {name: "eggs", price: 100},
 //   {name: "Milk", price: 200}
 // ]
-//                                                                                   // Need to understand
 // const result = shoppingCart.reduce((accumulator,currentValue) => {
 //   return (accumulator += currentValue.price)
 // },0)
 // console.log(result)
+//Assisgnent--------------------------------------------------------------------
+// const text = "HelloWorld".toLowerCase()
+// .split("")
+// .reduce((acc, variable) => {
+//   if("aeiou".includes(variable)){
+//     return acc +1
+//   } else{
+//     return acc
+//   }
+// },0)
+// console.log(text)
+// Another -----------------------------------------------------------
+// const text = "Helloworld".toLowerCase().split("").reduce((accu ,variable) => {
+//     if("aeiou".includes(variable)){
+//       return a = accu+1 
+//       return e = accu+1
+//       return i = accu+1
+//       return o = accu+1
+//       return u = accu+1 
+//     }else{
+//       return accu
+//     }
+//   },0)
+// Simple Generic Example-----------------------------------------------------------------------------
+// function identity<X>(abc: X): X{
+//   return abc 
+// }
+// Generic Example 1****************************************************************
+// const firstElement = <T>(arg: T[]): T => {
+//   return arg[0];
+// };
+// const testing = [1, 2, 3, 4, 5];
+// console.log(firstElement(testing));
+// const str = firstElement(["str","sa"])
+// Example2*******************************************
+// interface Person {
+//   name: string,
+//   age: number
+// }
+// interface Address {                            // Not done
+//   street: string
+//   city: string
+// }
+// type PersonAndAddress = Person & Address
+// const merge = <P, A>(obj1:P, obj2: A ): P, A =>{}
+// Constraints Example----------------------------------------------------------
+// interface Lengthwise {
+//   length: number
+// }
+// function logLength<T extends Lengthwise>(arg: T): void {
+//   console.log(arg.length);
+// }
+// logLength("abc")
+// Type Parameters in Generic Constraints------------------------------------------
+// function getProperty<T, K extends keyof T>(obj:T, key: K){
+//   console.log(obj[key]);
+// }
+// let x = {a: 1, b:2, c:3, d: 4}
+// getProperty(x,"c")
+// Generic in Class------------------------------------------------
+// class GenericClass<T>{
+//   value: T;
+//   constructor(value: T){
+//     this.value = value
+//   }
+//   getValue():T{
+//     return this.value
+//   }
+//   printValue<V>(arg: V){
+//     console.log(arg);
+//   }
+// }
+// const tesing = new GenericClass<string>("Hello")
+// console.log(tesing.getValue());
+// tesing.printValue<number>(123)

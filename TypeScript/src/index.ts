@@ -260,16 +260,85 @@
 
 // Another -----------------------------------------------------------
 
-const text = "Helloworld".toLowerCase().split("").reduce((accu ,variable) => {
-    if("aeiou".includes(variable)){
-      return a = accu+1 
-      return e = accu+1
-      return i = accu+1
-      return o = accu+1
-      return u = accu+1 
-    }else{
-      return accu
-    }
-  },0)
+// const text = "Helloworld".toLowerCase().split("").reduce((accu ,variable) => {
+//     if("aeiou".includes(variable)){
+//       return a = accu+1 
+//       return e = accu+1
+//       return i = accu+1
+//       return o = accu+1
+//       return u = accu+1 
+//     }else{
+//       return accu
+//     }
+//   },0)
+
+// Simple Generic Example-----------------------------------------------------------------------------
+// function identity<X>(abc: X): X{
+//   return abc 
+// }
+
+// Generic Example 1****************************************************************
+
+// const firstElement = <T>(arg: T[]): T => {
+//   return arg[0];
+// };
+
+// const testing = [1, 2, 3, 4, 5];
+
+// console.log(firstElement(testing));
+// const str = firstElement(["str","sa"])
+
+// Example2*******************************************
+
+// interface Person {
+//   name: string,
+//   age: number
+// }
+// interface Address {                            // Not done
+//   street: string
+//   city: string
+// }
+// type PersonAndAddress = Person & Address
+
+// const merge = <P, A>(obj1:P, obj2: A ): P, A =>{}
+
+// Constraints Example----------------------------------------------------------
+
+// interface Lengthwise {
+//   length: number
+// }
+// function logLength<T extends Lengthwise>(arg: T): void {
+//   console.log(arg.length);
+  
+// }
+// logLength("abc")
+
+// Type Parameters in Generic Constraints------------------------------------------
+
+// function getProperty<T, K extends keyof T>(obj:T, key: K){
+//   console.log(obj[key]);
+// }
+// let x = {a: 1, b:2, c:3, d: 4}
+// getProperty(x,"c")
+
+  // Generic in Class------------------------------------------------
+
+  // class GenericClass<T>{
+  //   value: T;
+
+  //   constructor(value: T){
+  //     this.value = value
+  //   }
+  //   getValue():T{
+  //     return this.value
+  //   }
+  //   printValue<V>(arg: V){
+  //     console.log(arg);
+      
+  //   }
+  // }
+  // const tesing = new GenericClass<string>("Hello")
+  // console.log(tesing.getValue());
+  // tesing.printValue<number>(123)
   
   

@@ -1026,7 +1026,7 @@
 // Static Method---------------------------------------------------------------
 
 // class MathUtile{
-//   static add(a,b){
+//    add(a,b){
 //     return a + b;
 //   }
 
@@ -1034,11 +1034,11 @@
 //     return a*b;
 //   }
 // }
-// console.log(MathUtile.add(5,5))
+// // console.log(MathUtile.add(5,5)) // This one only works if static is written before add 
 // console.log(MathUtile.multiply(5,2));
 
-// const testing = new MathUtile()   // Need to understand the Reason
-// console.log(testing.add(5,5));
+// const testing = new MathUtile()   
+// console.log(testing.add(5,5)); // this one will work if static written otherwise it wont work. Above line will work
 
 // Singleton Desing Pattern-------------------------------------------------------------------------
 
@@ -1057,7 +1057,7 @@
 //     return "User Logged in"
 //   }
 
-//   logoutUser(){                    // Need to understand
+//   logoutUser(){                    
 //     this.isUserLogedIn = false
 //     return "User logged out"
 //   }
@@ -1113,6 +1113,26 @@
 
 // console.log(student.name);
 
+//To add multiple property use this:***************************
+
+// const user = {}
+// Object.defineProperties(user, {
+//   name: {
+//     value: "Alice",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   },
+//   role: {
+//     value: "developer",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   }
+// })
+// console.log(user);
+
+
 //Getter and Setter---------------------------------------------------
 // const product = {
 //   title: "laptop",
@@ -1135,14 +1155,59 @@
 
 // class product {
 //   constructor(title,price){
-//     this.title = title
+//     this.title = titleconst user = {}
+// Object.defineProperties(user, {
+//   name: {
+//     value: "Alice",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   },
+//   role: {
+//     value: "developer",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   }
+// })
+// console.log(user);
 //     this.price = price
 //   }
 //   get details(){
 //     return `${this.title} current price is ${this.price}`
 //   }
 
-//   set details(value){
+//   set details(value){const user = {}
+// Object.defineProperties(user, {
+//   name: {
+//     value: "Alice",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   },
+//   role: {
+//     value: "developer",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   }const user = {}
+// Object.defineProperties(user, {
+//   name: {
+//     value: "Alice",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   },
+//   role: {
+//     value: "developer",
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+//   }
+// })
+// console.log(user);
+// })
+// console.log(user);
 //     const parts = value.split(" ")
 //     this.title = parts[0]
 //     this.price = parts[parts.length - 1]
@@ -1162,19 +1227,11 @@
 // }
 // console.log(obj.dynamickey);
 
-// Dynamic Exercise**********************************
+// Dynamic Exercise**********************************//Need to understand and done
 
 // let userInputs = [
 //   {key:"usernmae", value:"johndoe"},
 //   {key:"emial", value:"john@example.com"},
 //   {key:"password", value:"12345"}
 // ]
-
-// let user = {}               //Need to understand
-
-// for(const {key, value} of userInputs){
-//   user[key] = value
-// }
-// console.log(user);
-
 
