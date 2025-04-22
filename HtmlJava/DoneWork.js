@@ -934,18 +934,45 @@
 
   // class Library{
   //   constructor(){
-  //     this.Books = []
+  //     this.books = []
   //   }
 
-  //   addBook(Book){
-  //     this.Books.push(Book)                        //Need to done 
+  //   addBook(book){
+  //     this.books.push(book)                     
   //   }  
+  //   removeBook(title){
+  //     const Originallength = this.books.length
+  //     this.books = this.books.filter(book => book.title !== title)
+  //     if(this.books.length < Originallength){
+  //       console.log(`${title} has been removeed`);
+  //     } else{
+  //       console.log(`No title found with the of ${title}`);
+  //     }
+  //   }
+  //   findBook(title){
+  //     const foundBook = this.books.find(book => book.title === title)
+  //     if(foundBook){
+  //       console.log(`${foundBook.title} by ${foundBook.author}`);
+  //       return
+  //     }else{
+  //       console.log(`No book found with the title ${title}`);
+  //     }
+  //   }
+  //   listBooks(){
+  //     console.log("Books in Library:", this.books);
+  //   }
   // }
-  // book1 = new Library()
-  // book1.addBook({title: "journey", author:"William"})
-  // console.log(book1);
+  // books = new Library()
+  // books.addBook({title: "journey", author:"William"})
+  // books.addBook({title: "journey2", author:"William2"})
+  // console.log(books);
+  // // books.removeBook("journey2")
+  // // console.log(books);
+  // // books.findBook("journey2")
+  // books.listBooks()
+
   
-  // addBook(book1)
+  
   
   // Class Inheritance--------------------------------------------------------------------------------------------------------------------------
 
