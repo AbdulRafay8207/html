@@ -1227,11 +1227,19 @@
 // }
 // console.log(obj.dynamickey);
 
-// Dynamic Exercise**********************************//Need to understand and done
+// Dynamic Exercise**********************************
 
 // let userInputs = [
 //   {key:"usernmae", value:"johndoe"},
 //   {key:"emial", value:"john@example.com"},
 //   {key:"password", value:"12345"}
 // ]
+// obj = {}
+// for(i=0;i<userInputs.length;i++){
+//   keys = userInputs[i].key 
+//   values = userInputs[i].value  
+
+//   obj[keys] = values
+// }
+// console.log(obj);
 
