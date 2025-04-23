@@ -290,17 +290,25 @@
 
 // Example2*******************************************
 
-// interface Person {
-//   name: string,
-//   age: number
-// }
-// interface Address {                            // Not done
-//   street: string
-//   city: string
-// }
-// type PersonAndAddress = Person & Address
+interface Person {
+  name: string,
+  age: number
+}
+interface Address {                            
+  street: string
+  city: string
+}
+type PersonAndAddress = Person & Address
 
-// const merge = <P, A>(obj1:P, obj2: A ): P, A =>{}
+const merge = <P, A>(obj1:P, obj2: A ): P&A =>{
+  return  {...obj1, ...obj2}
+}
+const Person1 = {name: "Abdul", age: 19}
+const Address = {country: "Pakistan", city: "Karachi"}
+
+const fullinfo = merge(Person1,Address)
+console.log(fullinfo);
+
 
 // Constraints Example----------------------------------------------------------
 
