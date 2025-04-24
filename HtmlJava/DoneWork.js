@@ -1243,3 +1243,87 @@
 // }
 // console.log(obj);
 
+//Set*--------------------------------------------------------------------------------------------------------
+
+// const people = new Set()
+
+// people.add("John")
+// people.add("Sara")
+// people.add("Sara")      //Won't add same thing twice
+// people.add("Smith")
+
+// console.log("people", people);
+
+//Weakset**************************************************
+
+// let product = {title: "Laptop"}
+
+// const weakSet = new WeakSet()     // Need to understand
+
+// weakSet.add(product)
+// console.log(weakSet);
+
+// weakSet.delete({title: "Laptop"})   // Won't remove buz they have different reference
+// console.log(weakSet.has(product));
+// weakSet.delete(product)             // but this one will delete it
+// console.log(weakSet.has(product));
+
+//Maps------------------------------------------------------------------------------------------------------------
+
+// const map = new Map([
+//   ["name","John"],
+//   ["age","18"]
+// ])
+
+// console.log((map));
+
+// console.log(map.get("name"));
+// console.log(map.size);
+// console.log(map.entries);
+
+//WeakMap********************************************
+
+// const weakMap = new WeakMap()
+// weakMap.set("name","Usmaa")
+// console.log(weakMap);   // Won't Work
+
+// ************** */
+
+// const person = {
+//   name: "Usama"
+// }nst person = {
+//   name: "Usama"
+// }
+
+// const weakMap = new WeakMap()
+// weakMap.set(person, "askdasf")
+// console.log(weakMap.get(person));
+
+// const weakMap = new WeakMap()
+// weakMap.set(person, "askdasf")
+// console.log(weakMap.get(person));
+
+// console.log(weakMap);
+
+//************************************** */
+
+// let obj1 = {name: "Alice"}
+// let obj2 = {name: "John"}
+
+// const strongMap = new Map()
+// const weakMap = new WeakMap()
+
+// strongMap.set(obj1, "Engineer")
+// weakMap.set(obj2, "Designer")
+ 
+// console.log(strongMap.get(obj1));
+// console.log(weakMap.get(obj2));
+
+// obj1 = null
+// obj2 = null
+
+
+
+
+
+
