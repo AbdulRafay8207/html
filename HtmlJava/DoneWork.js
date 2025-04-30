@@ -788,10 +788,10 @@
 
 // const str = "I am learning JavaScript, We can build web app using JavaScript"
 // const pattern = /Javascript/gi
-// // const result = pattern.test(str)
-// // console.log(result)
+// const result = pattern.test(str)
+// console.log(result)
 
-// // console.log(str.replace("JavaScript", "python")) // first method 
+// console.log(str.replace("JavaScript", "python")) // first method 
 
 
 // const result2 = str.replace(pattern, "phython")
@@ -1146,7 +1146,7 @@
 //     this.price = parts[parts.length - 1]
 //   }
 // }
-// product.details = "headphone price is 3000"
+// // product.details = "headphone price is 3000"
 
 // console.log("prodcut", product);
 // console.log("details", product.details);
@@ -1321,9 +1321,6 @@
 
 // obj1 = null
 // obj2 = null
-
-
-
 
 
 

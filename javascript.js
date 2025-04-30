@@ -678,22 +678,22 @@ library[1].yearPublished = 2014 //Updating year
 
     // Task-------
 
-    sentence = "We are learning javascript"
-    ReversedSentence = ""
+    // sentence = "We are learning javascript"
+    // ReversedSentence = ""
     
-    for(i = sentence.length-1 ; i >=0; i-- ){
-      ReversedSentence += sentence[i]
-    }
+    // for(i = sentence.length-1 ; i >=0; i-- ){
+    //   ReversedSentence += sentence[i]
+    // }
     // console.log(ReversedSentence)
 
     
     // 2D array
 
-grid = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-]
+// grid = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ]
 //   console.log(grid[1][2])
 
 // for of loop---------------------------------------------------------------
@@ -712,14 +712,14 @@ for(i = 0; i<arr.length;i++){
 
 //for in loop------------------------------------------------
 
-person = {
-  firstname : "Abdul",
-  lastname : "Rafay",
-  age : 18
-}
-for(key in person){
+// person = {
+//   firstname : "Abdul",
+//   lastname : "Rafay",
+//   age : 18
+// }
+// for(key in person){
   // console.log(person[key])
-}
+// }
 
 
 //----------------Introduction to Function------------------------------
@@ -774,21 +774,21 @@ for(key in person){
 
 // Task-------MaskedEmail---------------------------------------------------------------------
 
-email = "abdulrafay.8207@gmail.com"
-MaskedEmail = ""
+// email = "abdulrafay.8207@gmail.com"
+// MaskedEmail = ""
 
-firstpart = email.split("@")[0]
-secondpart = email.split("@")[1]
+// firstpart = email.split("@")[0]
+// secondpart = email.split("@")[1]
 
-MaskedEmail += firstpart.slice(0,2)
+// MaskedEmail += firstpart.slice(0,2)
 
-for(i=2;i<firstpart.length-2;i++){
-  MaskedEmail+="*"
-}
+// for(i=2;i<firstpart.length-2;i++){
+//   MaskedEmail+="*"
+// }
 
-MaskedEmail += firstpart.slice(-2)
+// MaskedEmail += firstpart.slice(-2)
 
-MaskedEmail += "@"+secondpart
+// MaskedEmail += "@"+secondpart
 // console.log(MaskedEmail)
 // console.log(MaskedEmail.length)
 
