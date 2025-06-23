@@ -32,6 +32,7 @@ const UserIntoHtml = (users:{id:string; name:string, major:string }[]) => users.
     <td>${user.major}</td>
     <td><button class="editBtn" onclick="editUser('${user.id}')">Edit</button> <button class="deleteBtn" onclick="deleteUser('${user.id}')">Delete</button>
   </tr>`).join("")
+  
 
   const deleteUser = async (id: string) => {
     await fetch(`http://localhost:3000/users/${id}`, {

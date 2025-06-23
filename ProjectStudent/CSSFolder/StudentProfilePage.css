@@ -1,0 +1,60 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: #e2e4e7;;
+}
+#navbar {
+    background-color: rgb(71, 105, 197);
+    height: 13vh;
+    align-content: center;
+}
+#nav {
+    display: flex;
+    justify-content: right;
+}
+#a1, #a2, #a3, #a4 {
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+#Container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+}
+#box1 {
+    margin-top: 35px;
+    margin-left: 40px;
+    background-color: white;
+    height: 81vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px
+}   
+#box2 {
+    background-color: white;
+    width: 67vw;
+    height: 81vh;
+    margin-top: 35px;
+    margin-right: 4200px;
+    border-radius: 10px;
+}
+#profilepic {
+    height: 20vh;
+    width: 20vh;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 100%;
+}
+#studentName {
+    position: absolute;
+    top: 270px;
+}
+#infoDiv {
+    position: absolute;
+    top: 350px;
+}
