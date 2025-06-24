@@ -13,26 +13,26 @@ body, html {
     margin: -1.8px;
 }
 #box1 {
-    background-color:  rgb(71, 105, 197);
+    background-color:  rgb(84, 108, 173);
 }
 #box2 {
     background-color:  #e2e4e7;
 }
 #box3 {
-    background-color:  rgb(71, 105, 197);;
+    background-color:   rgb(84, 108, 173);
 }
 #login{
     height: 400px;
     width: 400px;
-    background-color: rgb(196, 187, 187);
+    background-color:  rgba(114, 139, 148, 0.555);
     position: absolute;
     top: 150px;
-    left: 470px;
+    left: 67.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 10px;
     border: 2px solid ;
 }
@@ -41,10 +41,10 @@ body, html {
 }
 h2 {
     margin-bottom: 0px;
-    margin-right: 170px;
+    margin-right: 150px;
 }
 #EmailHeading {
-    margin-right: 205px;
+    margin-right: 200px;
     margin-top: 20px;
 }
 #password {
@@ -69,10 +69,11 @@ h2 {
 }
 #forgotpassword{
     border: none;
-    background-color: rgb(196, 187, 187);
+    background-color:  rgba(114, 139, 148, 0.555);
     margin-top: 1px;
-    margin-right: 160px;
+    margin-right: 140px;
     margin-bottom: 30px;
+    font-size: 15px;
 }
 #forgotpassword:hover {
     color: rgb(5, 48, 167);
