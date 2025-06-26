@@ -47,3 +47,23 @@
 //     multi,
 //     div
 // }
+
+//------------------------------------------------------------------
+
+// module.exports = {
+//     createServer (callback){
+//         return {
+//             callback({}, {}){}
+//         }
+//     }
+// }
+
+//---------------------------------------------------------
+
+url = "http://localhost:3000/users?active=true&course=psdc"
+
+q1 = url.split("?")
+q2 = q1[1].split("&")
+console.log(q1, q2);
+
+
