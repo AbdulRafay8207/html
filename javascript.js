@@ -934,3 +934,24 @@ for(i = 0; i<arr.length;i++){
 // array.forEach(function(arr,index,idk){
 //   console.log(arr,index,idk)
 // })
+
+// obj1 = {name: "abdul", age:18}
+// obj2 = {...obj1}
+// obj1.name = "rafay"
+// console.log(obj1);
+// console.log(obj2);
+// console.log(">>>>>>>>>");
+
+// obj1 = {name: "abdul", age:18}
+// obj2 = obj1
+// obj1.name = "rafay"
+// console.log(obj1);
+// console.log(obj2);
+// console.log(">>>>>>>>>");
+
+// obj1 = {name: "abdul", age:18}
+// obj2 = obj1
+// obj1 = {name: "rafay"}
+// console.log(obj1);
+// console.log(obj2);
+

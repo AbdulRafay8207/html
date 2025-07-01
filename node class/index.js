@@ -69,14 +69,12 @@ function requestParser(){
 
 const requestHandler = (req,res)=>{
 
-    console.log(">>>>", req);
+    console.log(">>>>", req.url, req.method);
     res.end()
-    
-    console.log("path::", req.path);
 }
 
 const server = http.createServer(requestHandler)
 const PORT = 3000
 server.listen(PORT, ()=>{
-    console.log("server started on port 3000");
+    console.log("server started on port", PORT);
 })
