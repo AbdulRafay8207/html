@@ -62,15 +62,115 @@
 //-----------------------------------------------------------------------------------
 
 const http = require("http")
+const app = require("./mini-express")
 
-function requestParser(){
-    
+// obj = {
+//     "GET": {
+//         "/": (req, res)=>{
+//             res.end("Get object");
+//         },
+//         "/users": ()=>{}
+//     },
+//     "POST": {
+//         "/": (req, res)=>{
+//             console.log("Get object");
+//         },
+//         "/users": ()=>{}
+//     },
+//     "PATCH": {
+//         "/": (req, res)=>{
+//             console.log("Get object");
+//         },
+//         "/users": ()=>{}
+//     },
+//     "DELETE": {
+//         "/": (req, res)=>{
+//             console.log("Get object");
+//         },
+//         "/users": ()=>{}
+//     }
+// }
+
+
+
+function requestParser(req) {
+    const [path, query] = req.url.split("?")
+
+    req.path = path;
+    if (query) {
+        const queryArray = query.split("&");
+        const queryObj = {};
+        for (let i = 0; i < queryArray.length - 1; i++) {
+            const [key, value] = queryArray[i].split("=");
+            queryObj[key] = value;
+        }
+    }
+
 }
 
-const requestHandler = (req,res)=>{
+const getDashboardPage = (req, res) => {
+    res.end("Dashboard page")
+}
+// const getLoginPage = (req, res) => {
+//     res.end("Login Page")
+// }
+const getProfilePage = (req, res) => {
+    res.end("Profile Page")
+}
+// const postLoginRequest = (req, res) => {
+//     res.end("Post login Page")
+// }
 
-    console.log(">>>>", req.url, req.method);
-    res.end()
+
+app.get("/login", (req, res) => {
+    res.end("Login Pageee")
+})
+// console.log(">>>>", routes);
+app.post("/login", (req, res) => {
+    res.end("Post login Page")
+})
+// console.log(">>>>", routes );
+
+const requestHandler = (req,res)=>{
+    requestParser(req)
+    const routes = app.routes[req.method]?.[req.path]
+    if(routes) routes(req, res)
+    else res.end("Page not found")
+
+    // if(req.path === "/" && req.method === "GET"){
+    //     getDashboardPage(req, res)
+    // }
+
+    // else if(req.path === "/login" && req.method === "GET"){
+    //     getLoginPage(req, res)
+    // } 
+    // else if(req.path === "/user" && req.method === "GET"){
+    //     getProfilePage(req, res)
+    // } 
+    // else if(req.path === "/login" && req.method === "POST"){
+    //     postLoginRequest(req, res)
+    // } else res.end("Page not found")
+
+    // if(req.url == "/" && req.method == "GET"){
+    //     // console.log("Get request");
+    //     return res.end("Get")
+    // }
+
+    // else if(req.url == "/" && req.method == "POST"){
+    //     // console.log("Post request");
+    //     return res.end("Post")
+    // }
+
+    // else if(req.url == "/" && req.method == "PATCH"){
+    //     // console.log("Patch request");
+    //     return res.end("Patch")
+    // }
+
+    // else if(req.url == "/" && req.method == "DELETE"){
+    //     // console.log("Delete request");
+    //     return res.end("Delete")
+    // }
+    
 }
 
 const server = http.createServer(requestHandler)

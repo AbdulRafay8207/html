@@ -367,23 +367,23 @@ student.isEnrolled = "false"
 
 //  SWITCH CASE ----------------------
 
-// trafficlight = "red"
+// trafficlight = "asda"
 // message = "123"
 
 // switch(trafficlight){
-//   case "red":
+//     case "red":
 //     message = "stop immediately"
 //     break;
 
-//   case "yellow":
+//     case "yellow":
 //     message = "prepare to stop"
 //     break;
 
-//   case "green":
+//     case "green":
 //     message = "proceed or continue driving";
 //     break;
 
-//   default:
+//     default:
 //     message = "error"
 
 // }
@@ -954,4 +954,3 @@ for(i = 0; i<arr.length;i++){
 // obj1 = {name: "rafay"}
 // console.log(obj1);
 // console.log(obj2);
-
