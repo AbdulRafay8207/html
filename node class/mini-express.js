@@ -14,6 +14,20 @@ module.exports = class miniExpress{
     if(!this.routes.POST) this.routes.POST = {}
     this.routes.POST[path] = callback
 }
+dynamicRoutesHandler(req){
+  const route = this.routeWithParms[req.method]
+  if(!routes) return;
+  const pathKeys = Object.keys(routes);
+  for(let i = 0; i < pathKeys.length; i++){
+    const routePath = pathKeys[i]
+    const params = utils.paramsParser(routePath, req.path)
+    if(parms) {
+      req.params = params;
+      return routes[routePath]
+    }
+  }
+  return
+}
  requestHandler (req,res){
     utils.requestParser(req)
     const route = this.routes[req.method]?.[req.path]

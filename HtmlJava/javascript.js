@@ -954,3 +954,16 @@ for(i = 0; i<arr.length;i++){
 // obj1 = {name: "rafay"}
 // console.log(obj1);
 // console.log(obj2);
+
+path = "/user/:username"
+reqPath = "/user/rafay"
+
+function ParemParser(path, reqPath){
+  pathparse = path.split("/")
+  reqparse = reqPath.split("/")
+  for (let index = 0; index < pathparse.length; index++) {
+    const element = array[index];
+    
+  }
+}
+ParemParser(path, reqPath)
