@@ -1,30 +1,46 @@
 const express = require('express')
 const app = express()
+const validation = require("./validation.js")
+const fs = require('fs')
+const fspromise = require("fs/promises")
+
+// app.use((req, res, next) => {
+//     console.log("Request time:", new Date,"method",req.method,"URL",req.url);
+//     fs.appendFile('./access_logs.txt',log,"utf8",(err) => {
+//         if(err) throw err
+//     })
+//     next()
+// })
 
 let users = []
 
-app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+app.use(express.json({extended: true}))
 
-app.post("/users", (req, res) => {
-    function create(obj) {
-        users.push(obj)
+// Crate User
+app.post("/users",validation.createNewUserRequest, (req, res) => {
+    user = req.body
+    const newUser = {
+        id: user.length + 1,
+        ...user
     }
-    addUser = {
-        id: 1,
-        name: "abdul"
-    }
-    addUser2 = {
-        id: 2,
-        name: "rafay"
-    }
-    create(addUser)
-    create(addUser2)
-    res.send("User added")
+    users.push(newUser)
+    res.send({
+        data: newUser
+    })
 })
+
+// Read all Users
 
 app.get("/users", (req, res) => {
+    fspromise.readFile('./database.json', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+}); 
     res.send(users)
 })
+
+// Read User by ID
 
 app.get("/users/:id", (req, res) => {
     const userid = parseInt(req.params.id)
@@ -35,6 +51,8 @@ app.get("/users/:id", (req, res) => {
     res.send(user)
 })
 
+// Update User
+
 app.put("/users/:id", (req, res) => {
     const userid = parseInt(req.params.id)
     const user = users.find(user => user.id === userid)
@@ -44,6 +62,8 @@ app.put("/users/:id", (req, res) => {
     user.name = req.body.name
     res.send(user)
 })
+
+// Delete User
 
 app.delete("/users/:id", (req, res) => {
     const userid = parseInt(req.params.id)
