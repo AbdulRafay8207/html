@@ -12,16 +12,20 @@ const fspromise = require("fs/promises")
 //     next()
 // })
 
+
+
 let users = []
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json({extended: true}))
 
 // Crate User
-app.post("/users",validation.createNewUserRequest, (req, res) => {
-    user = req.body
+app.post("/users",validation.createUserRequest, (req, res) => {
+    const user = req.body
+    console.log(req.body);
+    
     const newUser = {
-        id: user.length + 1,
+        id: users.length + 1,
         ...user
     }
     users.push(newUser)
