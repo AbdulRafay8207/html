@@ -21,9 +21,9 @@ app.use(express.json({extended: true}))
 
 // Crate User
 app.post("/users",validation.createUserRequest, (req, res) => {
-    const user = req.body
-    console.log(req.body);
+    console.log("here");
     
+    const user = req.body    
     const newUser = {
         id: users.length + 1,
         ...user

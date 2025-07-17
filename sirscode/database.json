@@ -18,6 +18,26 @@
             "username": "karachi123",
             "email": "karachi@techpark.com",
             "deleted_at": "2025-07-15T07:06:17.193Z"
+        },
+        {
+            "id": 3,
+            "created_at": "2025-07-17T04:23:38.686Z",
+            "email": "123@gmail.com",
+            "username": "rafay",
+            "password": "123"
+        },
+        {
+            "id": 4,
+            "created_at": "2025-07-17T04:24:50.895Z",
+            "email": "123@gmail.com",
+            "username": "rafay",
+            "password": "123"
+        },
+        {
+            "id": 5,
+            "created_at": "2025-07-17T04:28:58.209Z",
+            "email": "123@gmail.com",
+            "password": "123"
         }
     ]
 }

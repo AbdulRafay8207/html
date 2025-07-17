@@ -3,10 +3,12 @@ const fs = require('fs')
 
 const validations = require('./validations');
 const express = require('express');
+const { log } = require('console');
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json({ extended: true }))
+app.set("view engine", "ejs")   
 
 // async function getFileData() {
 //     try {
@@ -52,12 +54,13 @@ app.get('/users', async (req, res) => {
         const contents = await fsPromises.readFile('./database.json', { encoding: 'utf8' });
         const data = JSON.parse(contents)
         const users = data.users.filter(user => !user.deleted_at)
-        res.send({
-            meta: {
-                total: users.length,
-            },
-            data: users
-        })
+        res.render("index",{users})
+        // res.send({
+        //     meta: {
+        //         total: users.length,
+        //     },
+        //     data: users
+        // })
     } catch (err) {
         console.error(err.message);
     }
@@ -90,6 +93,7 @@ app.get('/users/:id', async (req, res) => {
  */
 app.post('/users', validations.createUserRequest, async (req, res) => {
     const user = req.body;
+    
     try {
         const contents = await fsPromises.readFile('./database.json', { encoding: 'utf8' });
         const data = JSON.parse(contents)

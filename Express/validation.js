@@ -24,9 +24,9 @@
 module.exports = {
     createUserRequest(req, res, next) {
         const rules = {
-            username:{ require: true,},
-            password: { require: true, length: 8},
-            email: { require: true,}
+            username: true,
+            password: true,
+            email: true
         }
         const keys = Object.keys(rules);
         const errors = {}
@@ -34,13 +34,16 @@ module.exports = {
             const key = keys[index];
             if (!key) continue;
             if(!errors.message) errors.message = 'Validation error'
-            if (!req.body[key]) errors[key] = `${key} is required!`
+            if (!req.body[key]) errors[key] = `${key} is required!`            
         }
-        if (errors) {
+        console.log(errors);
+        
+        if (errors.error) {
             return res.status(422).send({
                 errors
             })
         }
+
 
         next()
     }
