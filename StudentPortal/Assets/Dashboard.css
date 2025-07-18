@@ -1,0 +1,150 @@
+ /* :root{
+                ---bg: #2563EB;
+            } */
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #dce1e6;
+                color: #111827;
+                line-height: 1.6;
+            }
+
+            header {
+                background-color: #2563EB;
+                padding: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: white;
+            }
+            #menu {
+                display: none; 
+                position: absolute;
+                background-color: white;
+                border: 1px solid #ddd;
+                right: 10px;
+                top: 100px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                padding: 10px 0;
+                border-radius: 10px;
+            }
+
+            a {
+                padding: 10px;
+                width: 200px;
+            
+                color: #2563EB;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                color:  #22d3ee;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                background-color: #3832a7;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 50px;
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+            }
+
+            button:hover {
+                background-color:  #22d3ee;
+                color: black;
+            }
+
+            main {
+                /* /* padding: 40px; */
+                margin: 20px; 
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 5px 1px;
+                border: 2px solid #2563EB;
+            }
+            #mainDiv{
+                background-color: rgb(235, 231, 225);
+                border: 3px solid rgb(255, 255, 255);
+            }
+
+            h1 {
+                color: whitesmoke;
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: var(---bg);
+                margin-top: 20px;
+                
+            }
+
+            h3 {
+                color: #4F46E5;
+                margin-top: 10px;
+                text-decoration: 4px underline;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+                background-color:  #ffffff; 
+                box-shadow: 10px 9px 9px  #111827;
+                border: 3px solid var(---bg) ;
+            }
+
+             th, td {
+                border: 2px solid #d1d5db;
+            }
+
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+
+            th {
+                background-color:#2563eb;
+                color: white;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f3f4f6;
+            }
+
+            ul {
+                margin-left: 10px;
+            }
+
+            
+            
+            .basic{
+                display: flex;
+                justify-content: space-around;
+                font-size: 20px;
+                font-style: italic;
+                font-display: none;
+                text-decoration:2px underline;
+            }
+            
+            .assign-table{
+                border: solid blue;
+                box-shadow: 10px 9px 9px  #111827;
+            }
+            .hd {
+                background: linear-gradient(to right,var(---bg) ,rgb(0, 153, 255),var(---bg));
+       
+            }
+            .box{
+                max-width: auto;
+                margin:   auto;
+                /* border: 9px  solid  #2563eb; */
+            }
