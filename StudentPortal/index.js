@@ -1,7 +1,6 @@
 const http = require('http')
 const express = require('express')
 const app = express()
-const path = require('path');
 app.set("view engine", "ejs")
 
 app.get("/login",(req,res) =>{
@@ -9,5 +8,5 @@ app.get("/login",(req,res) =>{
 })
 
 
-const PORT = 5500
+const PORT = 3000
 app.listen(PORT,()=> console.log("Server started at port",PORT))
