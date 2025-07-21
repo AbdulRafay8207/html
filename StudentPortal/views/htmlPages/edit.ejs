@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Protol</title>
+    <link rel="stylesheet" href="../../Assets/edit.css">
+</head>
+<body>
+    <header>
+            <h1 class="hd">Student Portal</h1>
+            <button id="navButton" onclick="menubar()"><img src="https://img.icons8.com/3d-fluency/30/menu.png" alt="menu"></button>
+
+                <nav id="menu" >
+                    <a href="./dashboard.html" target="_self">Home</a>
+                    <a href="./user.html" target="_self">View Profile</a> 
+                    <a href="./login.html" target="_self">Logout</a> 
+                </nav>
+        </header>
+    <div id="mainDiv">
+    <main>
+    <form >
+        <figure>
+            <h2>Student Picture</h2>
+            <img src="" alt="student-image">
+        </figure>
+      
+        <article>
+            <h2>Personal Information</h2>
+            <p><b>Full Name : </b></p> <input type="text" value="username"  placeholder="Enter your Full Name">
+            <p><b>Father Name :</b></p><input type="text" value="f.name"  placeholder="Enter your father name">
+            <p><b>Roll Number :</b> </p><input type="number" value="205214"  placeholder="Enter your roll-number">
+            <p><b>Date Of Birth :</b></p><input type="number" value="23-5-2006"  placeholder="Enter your date of birth">
+            <p><b>Cnic / B-Form :</b></p><input type="number" value="40213-3124214-2"  placeholder="Enter your Cnic / B-form">
+            <p><b>Email :</b></p><input type="email" value="abc@abc.com"  placeholder="Enter your Email">
+            <p><b>Contact Number :</b></p><input type="number" value="0312 2334124"  placeholder="Enter your phone number">
+       </article>   
+     
+        <article>
+
+            <h2>Student Data</h2>
+        
+            <figure>
+                <h3>Matric marksheet</h3>
+                <img src="" alt="matric-marksheet">
+            </figure>
+      
+            <figure>
+                <h3>Intermediate marksheet</h3>
+                <img src="" alt="intermediate-marksheet">
+            </figure>
+     
+        </article>
+
+        <button id="submitButton" onclick="window.location.href='./user.html'">Submit</button>
+
+    </form>
+    </main>
+    </div>
+    <script>
+            function menubar() {
+    const menu = document.getElementById("menu");
+    if (!menu) {
+        console.warn("Element with ID 'menu' not found.");
+        return;
+    }
+
+    const currentDisplay = window.getComputedStyle(menu).display;
+    menu.style.display = currentDisplay === "none" ? "block" : "none";
+}
+
+        </script>
+</body>
+</html>
