@@ -41,7 +41,7 @@ app.post('/login',createNewUser,async (req,res) => {
         }
         data.users.push(newUser)
         await fsPromises.writeFile('./database.json',JSON.stringify(data))
-        res.send({data: newUser})
+        res.render('htmlPages/Dasboard')
 
      }
     catch(err){
