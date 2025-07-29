@@ -29,6 +29,10 @@ function createNewUser(req,res,next){
     
 }
 
+app.get('/dashboard',(req, res) => {
+    res.render('htmlPages/Dashboard')
+})
+
 app.post('/login',createNewUser,async (req,res) => {
     user = req.body
     try{
@@ -41,7 +45,7 @@ app.post('/login',createNewUser,async (req,res) => {
         }
         data.users.push(newUser)
         await fsPromises.writeFile('./database.json',JSON.stringify(data))
-        res.render('htmlPages/Dasboard')
+        res.render('htmlPages/Dashboard')
 
      }
     catch(err){

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../Assets/login.css">
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #dce1e6;
+            font-family: 'Times New Roman', Times, serif;
+            color: #111827; 
+            height: 100vh;
+        }
+        #outerbox {
+            background-color: rgb(235, 231, 225);
+            border-radius: 10px;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 12px;
+        }
+        #container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 1px;
+            width: 400px;
+            border: 2px solid #2563EB;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            width: 380px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        #forgotpassword {
+            font-size: 14px;
+            text-decoration: none;
+            margin-left: 290px;
+        }
+        button {
+            font-size: 18px;
+            font-weight: bold;
+            color: #F9FAFB;
+            background-color: #2563EB;
+            margin-left: 170px;
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outerbox">
+        <div id="container">
+            <img src="https://baitussalam.org/images/logo.svg" alt="baitussalam">
+            <h1>Sign in</h1>
+            <form action="/login" method="post">
+            <input type="text" name="firstName" id="firstName" placeholder="First Name"><br> <br>
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name"><br> <br>
+            <input type="email" name="email" id="email" placeholder="Email"  /> <br> <br>
+            <input type="password" name="password" id="password" placeholder="Password"  />  
+            <a id="forgotpassword" href="forgot_password.html">Forgot Password?</a> <br> <br>
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
