@@ -1,18 +1,25 @@
 const http = require('http')
 const fsPromises = require('fs/promises')
 const express = require('express')
+const path = require('path')
+const { name } = require('ejs')
 const app = express()
 app.set("view engine", "ejs")
 app.use(express.json({extended:true}))
 app.use(express.urlencoded({extended: true}))
+app.use(express.static(path.join(__dirname, 'Assets')))
 
 app.get("/login",(req,res) =>{
     res.render('htmlPages/login');
+})
+app.get("/Signin",(req,res) =>{
+    res.render('htmlPages/Signin');
 })
 
 function createNewUser(req,res,next){
     const rules = {
         username: true,
+        email: true,
         password: true
     }
     const keys = Object.keys(rules)
@@ -33,8 +40,10 @@ app.get('/dashboard',(req, res) => {
     res.render('htmlPages/Dashboard')
 })
 
-app.post('/login',createNewUser,async (req,res) => {
+app.post('/Signin',createNewUser,async (req,res) => {
     user = req.body
+    console.log(user);
+    
     try{
         const content = await fsPromises.readFile('./database.json',{encoding: 'utf8'})
         const data = JSON.parse(content)
