@@ -3,8 +3,6 @@ const fsPromises = require('fs/promises')
 const validation = require('./validation.js')
 const express = require('express')
 const path = require('path')
-const { name } = require('ejs')
-const { log } = require('console')
 const app = express()
 app.set("view engine", "ejs")
 app.use(express.json({extended:true}))
@@ -12,23 +10,20 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'Assets')))
 
 app.get("/login",(req,res) =>{
-    res.render('htmlPages/login');
+    const errorMsg = req.query.error || null
+    res.render('htmlPages/login',{errorMsg})
 })
 app.post('/login', async(req,res) => {
     const {email, password} = req.body
     const content = await fsPromises.readFile('./database.json', {encoding: 'utf8'})
-    const data = JSON.parse(content)
-    // user = data.users[0].email 
-    for (let index = 0; index < data.users.length; index++) {
-        const element = data.users[index];
-        if(email == data.users[index] && password == data.users[index]){
-            console.log('successfully login');
-        }
-        res.render('htmlPages/login')
-        
+    const data = JSON.parse(content) 
+    const user = data.users.find(user => user.email === email && user.password === password)
+    if(user){
+        console.log('successfully login');
+        return res.render('htmlPages/Dashboard')
+    }else{
+        res.redirect('./login?error=Credential%20dont\'t%20match')
     }
-    
-    
 })
 app.get("/Signin",(req,res) =>{
     res.render('htmlPages/Signin');

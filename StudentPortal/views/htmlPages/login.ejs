@@ -13,11 +13,14 @@
         <div id="container">
             <img src="https://baitussalam.org/images/logo.svg" alt="baitussalam">
             <h1>Welcome Back</h1>
+            <% if(errorMsg){%>
+                <p id="errorMsg"><%= errorMsg %></p>
+            <% } %>
             <form action="/login" method="post">
             <input name="email" placeholder="Email" type="email" /> <br> <br>
             <input name="password" placeholder="Password" type="password" />  
             <a id="forgotpassword" href="forgot_password.html">Forgot Password?</a> <br> <br>
-            <button>Login</button>
+            <button type="submit">Login</button>
             </form>
         </div>
     </div>
