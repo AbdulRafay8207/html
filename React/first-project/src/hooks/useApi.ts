@@ -4,7 +4,10 @@ const useApi = ()=>{    //useApi always be constant
     const [posts, setPosts] = useState([])
     
         const getData = async ()=>{
-            const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+            const res = await fetch('https://jsonplaceholder.typicode.com/posts',{
+                method: "POST",
+                body: JSON.stringify({email})
+            })
             const data = await res.json()
             setPosts(data)
         }

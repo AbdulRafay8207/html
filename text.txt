@@ -4,3 +4,7 @@ Vercel
 https://bait-us-salam-psdc.netlify.app/react/react-assignment-1-b
 codeverstier
 https://www.codevertiser.com/react-progress-steps-component/
+Assignemnt:
+https://bait-us-salam-psdc.netlify.app/react/react-assignment-2
+28-aug-2025
+TODO, Input, Quiz, SteeperForm
