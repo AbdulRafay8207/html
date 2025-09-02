@@ -8,3 +8,5 @@ Assignemnt:
 https://bait-us-salam-psdc.netlify.app/react/react-assignment-2
 28-aug-2025
 TODO, Input, Quiz, SteeperForm
+2-sep-2025
+Need to understand useReducer
