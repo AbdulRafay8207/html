@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react"
+import { useReducer } from "react"
 import {reducer} from "../reducer/CounterReducer"
 
 const Counter = ()=>{
@@ -16,8 +16,8 @@ const Counter = ()=>{
         <div>
             <span>{state.count}</span>
             <div>
-                <button onClick={handleNext}>Previous</button>
-                <button onClick={handlePrevious}>Next</button>
+                <button onClick={handlePrevious}>Previous</button>
+                <button onClick={handleNext}>Next</button>
             </div>
         </div>
     )
