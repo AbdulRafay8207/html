@@ -10,3 +10,5 @@ https://bait-us-salam-psdc.netlify.app/react/react-assignment-2
 TODO, Input, Quiz, SteeperForm
 2-sep-2025
 Need to understand useReducer
+18-sep-2025 
+https://vivacious-cupcake-e52.notion.site/React-Redux-Lab-Boiler-Code-254bf22bbdd380748279f090fff165ca
