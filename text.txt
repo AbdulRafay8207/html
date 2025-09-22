@@ -12,3 +12,10 @@ TODO, Input, Quiz, SteeperForm
 Need to understand useReducer
 18-sep-2025 
 https://vivacious-cupcake-e52.notion.site/React-Redux-Lab-Boiler-Code-254bf22bbdd380748279f090fff165ca
+Always make this file when uploading project to vercel and must if the project has routing:
+vercel.json file and this code:
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

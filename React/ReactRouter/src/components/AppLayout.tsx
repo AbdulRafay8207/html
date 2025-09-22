@@ -8,7 +8,7 @@ const AppLayout = ()=>{
             <Navbar />
             <Outlet/>
             <Footer />
-        </div>
+        </div>  
     )
 }
 export default AppLayout
