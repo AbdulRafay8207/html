@@ -1,0 +1,44 @@
+{
+    "developers": [
+  {
+    "id": 1,
+    "title": "devloper cosmic logic",
+    "location": "San Francisco, USA"
+  },
+  {
+    "id": 2,
+    "title": "devloper pixel wizard",
+    "location": "Berlin, Germany"
+  },
+  {
+    "id": 3,
+    "title": "devloper cloud ninja",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "id": 4,
+    "title": "devloper data alchemist",
+    "location": "Toronto, Canada"
+  },
+  {
+    "id": 5,
+    "title": "devloper async dreamer",
+    "location": "Bangalore, India"
+  },
+  {
+    "id": 6,
+    "title": "devloper silent compiler",
+    "location": "Helsinki, Finland"
+  },
+  {
+    "id": 7,
+    "title": "devloper reactive mind",
+    "location": "Amsterdam, Netherlands"
+  },
+  {
+    "id": 8,
+    "title": "devloper midnight coder",
+    "location": "Seoul, South Korea"
+  }
+]
+}
